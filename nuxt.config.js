@@ -57,8 +57,12 @@ export default {
   //https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config#best-practices
   publicRuntimeConfig: { 
     userApiDomain: process.env.userApiDomain,
-    rootDomain: process.env.rootDomain },
-  privateRuntimeConfig: {},
+    rootDomain: process.env.rootDomain,
+  },
+  privateRuntimeConfig: {
+    userPoolId: process.env.userPoolId,
+    userPoolWebClientId: process.env.userPoolWebClientId,
+  },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
