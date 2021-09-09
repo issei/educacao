@@ -1,7 +1,8 @@
 <template>
 <v-content >
     <Head :headline="headline"></Head>
-    {{$config.userApiDomain}}
+    {{$config.userPoolWebClientId}}
+    {{$config.userPoolId}}
     <What :titulo="what.titulo" :texto="what.texto"></What>
     <Beneficios :conteudo="conteudos"></Beneficios> 
     <Prova></Prova>
