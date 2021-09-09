@@ -1,6 +1,7 @@
 <template>
 <v-content >
     <Head :headline="headline"></Head>
+    {{$config.userApiDomain}}
     <What :titulo="what.titulo" :texto="what.texto"></What>
     <Beneficios :conteudo="conteudos"></Beneficios> 
     <Prova></Prova>

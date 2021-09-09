@@ -33,6 +33,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: "~/plugins/amplify.js", ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -52,6 +53,12 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
+
+  //https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config#best-practices
+  publicRuntimeConfig: { 
+    userApiDomain: process.env.userApiDomain,
+    rootDomain: process.env.rootDomain },
+  privateRuntimeConfig: {},
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
