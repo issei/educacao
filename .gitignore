@@ -147,3 +147,10 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+
+# Don't commit build files
+node_modules
+dist
+.nuxt
+.awspublish
+deploy.sh

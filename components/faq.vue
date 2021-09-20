@@ -1,12 +1,12 @@
 <template>
-<v-content class="d-flex justify-content mx-10 py-5 my-5">
+<v-main class="d-flex justify-content mx-10 py-5 my-5">
     <v-row justify="center">
         <h1 class="d-flex justify-center align-center text-h4">Perguntas Frequentes</h1>
     </v-row>
     <v-row justify="center" class="my-10">
     <v-expansion-panels  focusable>
       <v-expansion-panel
-        v-for="(item,i) in 5"
+        v-for="(item,i) in perguntas"
         :key="i"
       >
         
@@ -16,15 +16,14 @@
               mdi-plus-thick
             </v-icon>
           </template>
-          <span  class="header ">Dúvida {{i}} sobre o curso?</span>
+          <span  class="header ">{{item.pergunta}}</span>
           </v-expansion-panel-header>
-        <v-expansion-panel-content>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <v-expansion-panel-content>{{item.resposta}}
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
   </v-row>
-</v-content>
+</v-main>
 </template>
 <style scoped>
 .icon {
@@ -36,3 +35,11 @@
         margin-left: 10px;
     }
 </style>
+<script>
+export default {
+  props: ["perguntas"],
+  data() {
+    return {};
+  },
+};
+</script>

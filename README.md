@@ -15,7 +15,10 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+$ npm install @nuxtjs/gtm
 ```
+
+https://nuxtjs.org/docs/2.x/deployment/deployment-amazon-web-services
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 

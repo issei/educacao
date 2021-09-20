@@ -1,82 +1,131 @@
 <template>
-<v-content >
+<v-main >
+
     <Head :headline="headline"></Head>
-    {{$config.userPoolWebClientId}}
-    {{$config.userPoolId}}
-    <What :titulo="what.titulo" :texto="what.texto"></What>
+    <Beneficios :conteudo="praquem"></Beneficios> 
+    <Oque :titulo="what.titulo" :texto="what.texto"></Oque>
     <Beneficios :conteudo="conteudos"></Beneficios> 
-    <Prova></Prova>
-    <Acao titulo="Como posso participar?" subtitulo="Cadastre-se na lista de espera para ser avisado da próxima turma."></Acao> 
-    <Who></Who>  
-    <Faq></Faq>
-</v-content>
+    <CallToAction :titulo="chamadaAcao.titulo" :subtitulo="chamadaAcao.descricao"></CallToAction> 
+    <Quemsomos :texto="who.texto"></Quemsomos>  
+    <Faq :perguntas="faqs"></Faq>
+</v-main>
 </template>
 <script>
-import Head from "~/components/head.vue";
-import Who from "~/components/quemsomos.vue";
-import Beneficios from "~/components/beneficios.vue";
-import Faq from "~/components/faq.vue";
-import Acao from "~/components/callToAction.vue";
-import Prova from "~/components/comprovacao.vue";
-import What from "~/components/oque.vue";
 
 export default {
-  components: {
-    Head,
-    Who,
-    Beneficios,
-    Faq,
-    Acao,
-    Prova,
-    What
-  },
   data() {
     return {
+      //"O seu filho precisa estar preparado para o mundo digital"
+      //"O curso de programação estimula habilidades essenciais para um futuro promissor"
+      //"O seu filho precisa estar preparado para o mundo digital"
+      //"Quem aprende Programação desenvolve habilidades benéficas para a vida toda como racicínio lógico, criatividade e engenhosidade."
       headline: {
-        titulo: "Prepare o seu filho para a habilidade que o mundo mais precisa.",
-        subtitulo: "Quem aprende Programação desenvolve habilidades benéficas para a vida toda como racicínio lógico, criatividade e engenhosidade.",
+        titulo: "O SEU FILHO PRECISA ESTAR PREPARADO PARA O MUNDO DIGITAL",
+        subtitulo: "O curso de programação estimula habilidades essenciais para um futuro promissor",
         texto_botao: "Lista de Espera"
       },
+      chamadaAcao:{
+        titulo: "Como posso participar?",
+        descricao: "Cadastre-se na lista de espera para ser avisado da próxima turma."
+      },
       who:{
-        titulo: "Quem sou?",
+        titulo: "",
         foto: "",
-        descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        texto: "<SPAN STYLE=\"font-weight:bold\">Maurício Issei</SPAN> é apaixonado por <SPAN STYLE=\"font-weight:bold\">tecnologia e inovação</SPAN>, atua na área <SPAN STYLE=\"font-weight:bold\">há mais de 15 anos.</SPAN> Como pai, se preocupa com o ensino das crianças, seu grande objetivo é ajudar elas a se prepararem para <SPAN STYLE=\"font-weight:bold\">um mundo totalmente digital.</SPAN>",
       },
       what:{
-        titulo: "Esteja preparado para os desafios",
-        texto: "O mundo de hoje apresenta desafios significativos para os jovens e é nossa responsabilidade dar-lhes ferramentas e capacitá-los para adquirir o conhecimento e as habilidades  necessárias para ter sucesso em um futuro altamente competitivo. A programação é uma habilidade indispensável para o futuro.",
+        titulo: "O que é este curso?",
+        texto: "Este curso traz o aluno para a linguagem do futuro, onde ele irá aprender conceitos básicos de programação. Nossos alunos são incentivados durante todo o curso a usar a imaginação, criatividade e pensamento crítico, habilidades fundamentais para os dias de hoje. Não acreditamos em teoria sem prática, aqui o seu filho aprende fazendo! ",
         imagem: "",
       },
-      conteudos: {
-        titulo: "Com esse curso você vai aprender:",
+      praquem: {
+        titulo: "Como funciona o curso?",
         items: [
         {
-          imagem: "mdi-puzzle-plus-outline",
-          titulo: "Curso completo",
-          descricao: "Curso online com aulas práticas que mostram o passo a passo detalhado para aprender através da internet e principalmente preparar-los para o futuro. São conceitos e técnicas diferenciadas e únicos que funcionam para qualquer área de atuação."
+          imagem: "https://issei.imgix.net/icones/jovem.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Crianças e Adolescentes",
+          descricao: "O curso é indicado para crianças entre 9 e 14 anos"
         },
         {
-          imagem: "mdi-puzzle-plus-outline",
-          titulo: "Assista quando puder",
-          descricao: "Aulas gravadas para assistir no melhor horário e no conforto e segurança de onde estiver."
+          imagem: "https://issei.imgix.net/icones/Acesso.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Acesso Imediato",
+          descricao: "O login e senha serão enviados no seu e-mail, após o processamento do pagamento."
         },
         {
-          imagem: "mdi-puzzle-plus-outline",
-          titulo: "Amizades",
-          descricao: "Conhecerá pessoas incríveis e dispostas a alcançar suas metas e objetivos junto com você, de lá surge muitas amizades."
+          imagem: "https://issei.imgix.net/icones/Formato.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Formato",
+          descricao: "Nosso curso é 100% on-line e gravado, seu filho pode fazer conforme a disponibilidade de horário dele, além de conseguir rever as aulas."
         },
         {
-          imagem: "mdi-puzzle-plus-outline",
-          titulo: "Aprendizado Empírico",
-          descricao: "Acreditamos que você aprende de fato quando coloca em prática, por isso sempre colocamos desafios após as aulas e mentorias para que você evoluir mais rápido"
+          imagem: "https://issei.imgix.net/icones/Conhecimento.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Conhecimento",
+          descricao: "O curso é para crianças e adolescentes que tenham interesse e querem aprender conceitos de programação, não precisa de conhecimento em tecnologia."
         },
         {
-          imagem: "mdi-puzzle-plus-outline",
-          titulo: "Aprendizado Empírico",
-          descricao: "O quanto antes começar, mais cedo irá aproveitar as oportunidades. Não perca essa oportunidade de dominar essa habilidade."
+          imagem: "https://issei.imgix.net/icones/Suporte.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Suporte",
+          descricao: "Seu filho terá as dúvidas respondidas diretamente com o professor através do WhatsApp e E-mail."
+        },
+        {
+          imagem: "https://issei.imgix.net/icones/Ferramenta.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Ferramentas",
+          descricao: "Não requer instalação e nem compra de software. É necessário internet e um computador para realizar as atividades."
         },
       ],
       },
+      conteudos: {
+        titulo: "O que este curso estimula?",
+        items: [
+        {
+          imagem: "https://issei.imgix.net/icons/5.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Raciocínio Lógico",
+          descricao: "Estimula o pensamento crítico, confiança, inteligência emocional e a autonomia, soft skills que seu filho precisa hoje para a fase escolar e no futuro, para a vida adulta."
+        },
+        {
+          imagem: "https://issei.imgix.net/icons/3.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Resolução de Problemas",
+          descricao: "A capacidade analítica é fundamental para formar adultos mais independentes e capazes de ultrapassar obstáculos, uma forma de desenvolvê-la desde cedo é por meio do aprendizado de programação. Afinal, será preciso testar o mesmo código diversas vezes até encontrar e corrigir seus problemas."
+        },
+        {
+          imagem: "https://issei.imgix.net/icons/4.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Futuro",
+          descricao: "O seu filho vai ter contato com as principais habilidades e competências do século 21"
+        },
+        {
+          imagem: "https://issei.imgix.net/icons/1.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Aprendizado Empírico",
+          descricao: "Acreditamos que os alunos aprendem de fato quando colocam em prática tudo aquilo que aprenderam, por isso colocamos desafios durante as aulas para eles evoluírem mais rápido."
+        },
+        {
+          imagem: "https://issei.imgix.net/icons/2.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Criatividade",
+          descricao: "Estimula o cérebro do aluno de diversas formas, ajudando em seu desenvolvimento como um todo."
+        },
+        {
+          imagem: "https://issei.imgix.net/icones/Icones%20Beneficios.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Incentiva o Aprendizado Escolar",
+          descricao: "Ao começar a programar, a criança prepara o seu raciocínio lógico para aprender com mais facilidade as disciplinas das áreas de exatas, como Física, Química e Matemática."
+        },
+      ],
+      },
+      faqs: [
+        {
+          pergunta: "Precisa ter conhecimento em programação?",
+          resposta: "Não, o curso é para crianças e adolescentes que tenham interesse e querem aprender conceitos de programação."
+        },
+        {
+          pergunta: "O curso é presencial?",
+          resposta: "Não, para atender todos os interessados, nosso curso é 100% online."
+        },
+        {
+          pergunta: "Tem suporte para tirar as dúvidas?",
+          resposta: "Sim, durante um mês o aluno e os pais terão contato direto com o Professor através do WhatsApp e e-mail."
+        },
+        {
+          pergunta: "Por que aprender programação e tecnologia ainda em idade escolar?",
+          resposta: "Entre os muitos benefícios da lógica de programação podemos citar: melhoria da escrita, desenvolvimento criativo e ampliação do raciocínio lógico. Saber programar é praticamente tão importante quanto dominar o inglês, uma vez que as empresas procuram cada vez mais por profissionais com essa habilidade. Inclusive, essa tendência tende a continuar crescente nos próximos anos. Por isso, investir na programação para crianças é uma forma de garantir ao seu filho um diferencial competitivo para quando ele entrar no mercado de trabalho. É notável que a informática é essencial para boa colocação no mercado de trabalho e em vários setores saber programar é um requisito muito importante. Sendo assim preparar os futuros desenvolvedores desde a infância dando primeiros passos de forma divertida é essencial."
+        },
+      ],
       titulos: [
         "T-Shirts",
         "Empoderando seu Estilo",

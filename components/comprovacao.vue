@@ -1,5 +1,5 @@
 <template>
-<v-content class="mx-5 my-15 pa-2">
+<v-main class="mx-5 my-15 pa-2">
     <v-row>
         <v-col cols="12" sm="12" lg="6">
             <v-sheet class="d-flex flex-column justify-center">
@@ -28,5 +28,5 @@
             </v-sheet>
         </v-col>
     </v-row>
-</v-content>    
+</v-main>    
 </template>

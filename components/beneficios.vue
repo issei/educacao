@@ -1,5 +1,5 @@
 <template>
-    <v-content class="d-flex">
+    <v-main class="d-flex">
       <v-row class="d-flex justify-center align-center">
         <h1 class="d-flex justify-center align-center text-h4 my-5"  style="color: black">
           {{ conteudo.titulo }}
@@ -18,9 +18,9 @@
           sm="5"
           class="d-inline-flex align-self-auto pa-4"
         >
-          <v-icon class="pr-5">{{ item.imagem }}</v-icon>
+          <v-img :src="item.imagem" width="67" height="58"></v-img>
 
-          <v-sheet width="100%">
+          <v-sheet width="100%" class="pl-3">
             <v-sheet width="100%">
               <p class="font-weight-black">{{ item.titulo }}</p>
             </v-sheet>
@@ -29,9 +29,9 @@
         </v-col>
       </v-row>
       <v-row justify="center" class="my-5">
-        <v-btn color="success" class="mr-4">Participe</v-btn>
+        <v-btn color="success" class="mr-4" @click="$vuetify.goTo('#lead')">Lista de Espera</v-btn>
       </v-row>
-    </v-content>
+    </v-main>
 </template>
 <script>
 export default {

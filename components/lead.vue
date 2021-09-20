@@ -11,7 +11,7 @@
       full-width
       color="#ffab1a"
     ></v-text-field>
-    <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
+    <v-btn :disabled="!valid && loading" color="success" class="mr-4" @click="validate" :loading="loading">
       {{texto_botao}}
     </v-btn>
   </v-form>
@@ -20,6 +20,7 @@
 export default {
   props: ['texto_botao'],
   data: () => ({
+    loading: false,
     valid: true,
     email: "",
     emailRules: [
@@ -33,22 +34,29 @@ export default {
   methods: {
     validate() {
       this.$refs.form.validate();
-      this.nameOfFunction();
+      if(this.valid) this.nameOfFunction();
     },
     reset() {
       this.$refs.form.reset();
     },
     resetValidation() {
+      this.loading = false;
       this.$refs.form.resetValidation();
     },
     async nameOfFunction(){
-    await this.$axios.$post('https://1fe64b5e-5c1b-4a41-9da9-c4567f0ebcc6.mock.pstmn.io/email', 
+      this.$nuxt.$loading.start()
+      this.loading = true;
+    const post = await this.$axios.$post('https://api.issei.com.br/lead', 
     {
         email: this.email,
     }, 
-    {
-        // Config
-    })
+     {}).then((result)=> {
+       console.log(result);
+       this.loading = false;
+       this.$nuxt.$loading.finish()
+       this.$router.push("/obrigado");
+     }
+     )
 }
   },
 };

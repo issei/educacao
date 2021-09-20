@@ -5,12 +5,18 @@
     </v-main>
     <v-footer
       :absolute="!fixed"
+      class="d-flex justify-center"
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5F5585F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   </v-app>
 </template>
+
 <style>
 .headline-titulo{
   color: black;
