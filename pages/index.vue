@@ -44,7 +44,7 @@ export default {
         {
           imagem: "https://issei.imgix.net/icones/jovem.png?auto=compress&auto=enhance&w=67&h=58",
           titulo: "Crianças e Adolescentes",
-          descricao: "O curso é indicado para crianças entre 9 e 14 anos"
+          descricao: "O curso é indicado para crianças entre 9 a 14 anos"
         },
         {
           imagem: "https://issei.imgix.net/icones/Acesso.png?auto=compress&auto=enhance&w=67&h=58",

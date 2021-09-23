@@ -1,7 +1,12 @@
 <template>
-<v-main class="d-flex justify-content mx-10 py-5 my-5">
+ <v-responsive
+    :aspect-ratio="16 / 6"
+    class="d-flex justify-center align-center mx-2 pa-2 my-2"
+    style="background: #cccccc;"
+  >
+    <v-container>
     <v-row justify="center">
-        <h1 class="d-flex justify-center align-center text-h4">Perguntas Frequentes</h1>
+        <h1 class="d-flex justify-center align-center headline">Perguntas Frequentes</h1>
     </v-row>
     <v-row justify="center" class="my-10">
     <v-expansion-panels  focusable>
@@ -23,7 +28,8 @@
       </v-expansion-panel>
     </v-expansion-panels>
   </v-row>
-</v-main>
+  </v-container>
+  </v-responsive>
 </template>
 <style scoped>
 .icon {

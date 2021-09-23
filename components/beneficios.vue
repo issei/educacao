@@ -1,7 +1,11 @@
 <template>
-    <v-main class="d-flex">
+  <v-responsive
+    :aspect-ratio="16 / 6"
+    class="d-flex justify-center align-center mx-2 pa-2 my-2"
+  >
+    <v-container>
       <v-row class="d-flex justify-center align-center">
-        <h1 class="d-flex justify-center align-center text-h4 my-5"  style="color: black">
+        <h1 class="d-flex justify-center align-center headline my-5"  style="color: black">
           {{ conteudo.titulo }}
         </h1>
       </v-row>
@@ -31,7 +35,8 @@
       <v-row justify="center" class="my-5">
         <v-btn color="success" class="mr-4" @click="$vuetify.goTo('#lead')">Lista de Espera</v-btn>
       </v-row>
-    </v-main>
+    </v-container>
+  </v-responsive>
 </template>
 <script>
 export default {

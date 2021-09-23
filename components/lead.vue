@@ -10,10 +10,12 @@
       required
       full-width
       color="#ffab1a"
+      green
     ></v-text-field>
     <v-btn :disabled="!valid && loading" color="success" class="mr-4" @click="validate" :loading="loading">
       {{texto_botao}}
     </v-btn>
+    <v-overlay :value="loading"></v-overlay>
   </v-form>
 </template>
 <script>
@@ -24,7 +26,7 @@ export default {
     valid: true,
     email: "",
     emailRules: [
-      (v) => !!v || "E-mail deve ser informado",
+      (v) => !!v || "Informe seu E-mail",
       (v) =>
         /.+@.+\..+/.test(v) ||
         "Informe E-mail válido ex. email@dominio.com.br ",
@@ -34,7 +36,7 @@ export default {
   methods: {
     validate() {
       this.$refs.form.validate();
-      if(this.valid) this.nameOfFunction();
+      this.nameOfFunction();
     },
     reset() {
       this.$refs.form.reset();
