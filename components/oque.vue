@@ -15,7 +15,7 @@
         >
         <v-img
           contain
-          src="https://issei.imgix.net/banner-artwork.png?auto=compress&auto=format"
+          :src="imagem"
           width="300"
           height="300"
         ></v-img>
@@ -28,5 +28,4 @@ export default {
   props: ["titulo", "texto", "imagem"],
   data: () => ({}),
 };
-</script>
 </script>

@@ -154,3 +154,5 @@ dist
 .nuxt
 .awspublish
 deploy.sh
+
+.awspublish-lp-curso

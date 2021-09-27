@@ -1,5 +1,5 @@
 <template>
-    <v-responsive :aspect-ratio="16/6" class="d-flex justify-center align-center mx-2 pa-2 my-2"
+    <v-responsive :aspect-ratio="16/6" class="d-flex justify-center align-center "
     style="background: #deeeee; color: #157060;">
     <v-container>
     <v-row align="center" justify="center">
@@ -22,7 +22,7 @@
         <v-img
           contain
           src="./iconehome.png"
-          height="300"
+          height="400"
         ></v-img>
       </v-col>
     </v-row>

@@ -12,7 +12,20 @@
                 frameborder="0"/>
         </v-row>
         <v-row align="center" justify="center" class="my-10">
-            <v-btn color="success" class="">Pesquisa</v-btn>
+            <v-dialog hide-overlay='true' scrollable='false' max-width="800px" transition="dialog-bottom-transition">
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn id="abrirPesquisa"
+                  color="success"
+                  v-bind="attrs"
+                  v-on="on"
+                >
+                  Pesquisa
+                </v-btn>
+              </template>
+              <v-card>
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeMsZ2Nlbm8jxAHJiFGA81w8SLS9ob4DD_O6AOmQBIwFLZ9lQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" >Carregando…</iframe>
+              </v-card>
+            </v-dialog>
         </v-row>
 </v-container>
   </v-responsive>

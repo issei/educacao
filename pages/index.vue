@@ -3,7 +3,7 @@
 
     <Head :headline="headline"></Head>
     <Beneficios :conteudo="praquem"></Beneficios> 
-    <Oque :titulo="what.titulo" :texto="what.texto"></Oque>
+    <Oque :titulo="what.titulo" :texto="what.texto" :imagem="what.imagem"></Oque>
     <Beneficios :conteudo="conteudos"></Beneficios> 
     <CallToAction :titulo="chamadaAcao.titulo" :subtitulo="chamadaAcao.descricao"></CallToAction> 
     <Quemsomos :texto="who.texto"></Quemsomos>  
@@ -35,8 +35,8 @@ export default {
       },
       what:{
         titulo: "O que é este curso?",
-        texto: "Este curso traz o aluno para a linguagem do futuro, onde ele irá aprender conceitos básicos de programação. Nossos alunos são incentivados durante todo o curso a usar a imaginação, criatividade e pensamento crítico, habilidades fundamentais para os dias de hoje. Não acreditamos em teoria sem prática, aqui o seu filho aprende fazendo! ",
-        imagem: "",
+        texto: "Este curso traz o aluno para a linguagem do futuro, onde ele irá aprender conceitos básicos de programação, letramento digital e pensamento computacional. Nossos alunos são incentivados durante todo o curso a usar a imaginação, criatividade e pensamento crítico, habilidades fundamentais para os dias de hoje. Não acreditamos em teoria sem prática, aqui o seu filho aprende fazendo!",
+        imagem: "https://issei.imgix.net/banner-artwork.png?auto=compress&auto=format",
       },
       praquem: {
         titulo: "Como funciona o curso?",
@@ -76,15 +76,16 @@ export default {
       conteudos: {
         titulo: "O que este curso estimula?",
         items: [
-        {
-          imagem: "https://issei.imgix.net/icons/5.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Raciocínio Lógico",
-          descricao: "Estimula o pensamento crítico, confiança, inteligência emocional e a autonomia, soft skills que seu filho precisa hoje para a fase escolar e no futuro, para a vida adulta."
+          {
+          imagem: "https://issei.imgix.net/icons/2.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Criatividade",
+          descricao: "A programação estimula o cérebro do aluno a criar aplicações, dando vida às ideias e novas formas de se expressar. "
         },
+        
         {
           imagem: "https://issei.imgix.net/icons/3.png?auto=compress&auto=enhance&auto=format",
           titulo: "Resolução de Problemas",
-          descricao: "A capacidade analítica é fundamental para formar adultos mais independentes e capazes de ultrapassar obstáculos, uma forma de desenvolvê-la desde cedo é por meio do aprendizado de programação. Afinal, será preciso testar o mesmo código diversas vezes até encontrar e corrigir seus problemas."
+          descricao: "Seu filho aprenderá como analisar os cenários, propor ideias e como pratica-las."
         },
         {
           imagem: "https://issei.imgix.net/icons/4.png?auto=compress&auto=enhance&auto=format",
@@ -97,9 +98,9 @@ export default {
           descricao: "Acreditamos que os alunos aprendem de fato quando colocam em prática tudo aquilo que aprenderam, por isso colocamos desafios durante as aulas para eles evoluírem mais rápido."
         },
         {
-          imagem: "https://issei.imgix.net/icons/2.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Criatividade",
-          descricao: "Estimula o cérebro do aluno de diversas formas, ajudando em seu desenvolvimento como um todo."
+          imagem: "https://issei.imgix.net/icons/5.png?auto=compress&auto=enhance&auto=format",
+          titulo: "Raciocínio Lógico",
+          descricao: "Ao conhecer a linguagem de programação, os alunos são ensinados a pensar de forma estruturada e de como lidar com os erros."
         },
         {
           imagem: "https://issei.imgix.net/icones/Icones%20Beneficios.png?auto=compress&auto=enhance&auto=format",
@@ -119,11 +120,11 @@ export default {
         },
         {
           pergunta: "Tem suporte para tirar as dúvidas?",
-          resposta: "Sim, durante um mês o aluno e os pais terão contato direto com o Professor através do WhatsApp e e-mail."
+          resposta: "Sim, o aluno e os pais terão contato direto com o Professor através do WhatsApp e e-mail."
         },
         {
           pergunta: "Por que aprender programação e tecnologia ainda em idade escolar?",
-          resposta: "Entre os muitos benefícios da lógica de programação podemos citar: melhoria da escrita, desenvolvimento criativo e ampliação do raciocínio lógico. Saber programar é praticamente tão importante quanto dominar o inglês, uma vez que as empresas procuram cada vez mais por profissionais com essa habilidade. Inclusive, essa tendência tende a continuar crescente nos próximos anos. Por isso, investir na programação para crianças é uma forma de garantir ao seu filho um diferencial competitivo para quando ele entrar no mercado de trabalho. É notável que a informática é essencial para boa colocação no mercado de trabalho e em vários setores saber programar é um requisito muito importante. Sendo assim preparar os futuros desenvolvedores desde a infância dando primeiros passos de forma divertida é essencial."
+          resposta: "Entre os muitos benefícios da lógica de programação podemos citar: desenvolvimento criativo, ampliação do raciocínio lógico e resolução de problemas. Saber programar é praticamente tão importante quanto dominar o inglês, uma vez que as empresas procuram cada vez mais por profissionais com essa habilidade. Inclusive, essa tendência tende a continuar crescente nos próximos anos. Por isso, investir na programação para crianças é uma forma de garantir ao seu filho um diferencial competitivo para quando ele entrar no mercado de trabalho."
         },
       ],
       titulos: [

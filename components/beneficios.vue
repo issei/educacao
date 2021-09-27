@@ -4,8 +4,8 @@
     class="d-flex justify-center align-center mx-2 pa-2 my-2"
   >
     <v-container>
-      <v-row class="d-flex justify-center align-center">
-        <h1 class="d-flex justify-center align-center headline my-5"  style="color: black">
+      <v-row class="d-flex justify-center align-center pb-10">
+        <h1 class="d-flex justify-center align-center headline"  style="color: black">
           {{ conteudo.titulo }}
         </h1>
       </v-row>
@@ -20,14 +20,12 @@
           cols="12"
           lg="4"
           sm="5"
-          class="d-inline-flex align-self-auto pa-4"
+          class="d-inline-flex align-self-auto"
         >
           <v-img :src="item.imagem" width="67" height="58"></v-img>
 
-          <v-sheet width="100%" class="pl-3">
-            <v-sheet width="100%">
-              <p class="font-weight-black">{{ item.titulo }}</p>
-            </v-sheet>
+          <v-sheet width="100%" class="pl-3 justify-space-around">
+            <span class="font-weight-black">{{ item.titulo }}</span>
             <p>{{ item.descricao }}</p>
           </v-sheet>
         </v-col>

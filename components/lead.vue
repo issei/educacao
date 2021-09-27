@@ -12,10 +12,9 @@
       color="#ffab1a"
       green
     ></v-text-field>
-    <v-btn :disabled="!valid && loading" color="success" class="mr-4" @click="validate" :loading="loading">
+    <v-btn id="envioLead" :disabled="!valid && loading" color="success" class="mr-4" @click="validate" :loading="loading">
       {{texto_botao}}
     </v-btn>
-    <v-overlay :value="loading"></v-overlay>
   </v-form>
 </template>
 <script>
