@@ -11,7 +11,7 @@
           min-width="350"
           class="d-flex justify-space-around align-center mx-2 pa-6"
         >
-          <p>{{ texto }}</p></v-card
+          <p v-html="texto"></p></v-card
         >
         <v-img
           contain

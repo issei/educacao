@@ -1,6 +1,6 @@
 <template>
  <v-responsive
-    :aspect-ratio="16 / 6"
+    :aspect-ratio="16 / 5"
     class="d-flex justify-center align-center mx-2 pa-2 my-2"
     style="background: #cccccc;"
   >
@@ -23,7 +23,8 @@
           </template>
           <span  class="header ">{{item.pergunta}}</span>
           </v-expansion-panel-header>
-        <v-expansion-panel-content>{{item.resposta}}
+        <v-expansion-panel-content>
+            <p class="ma-5">{{item.resposta}}</p>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>

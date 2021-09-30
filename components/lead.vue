@@ -12,14 +12,21 @@
       color="#ffab1a"
       green
     ></v-text-field>
-    <v-btn id="envioLead" :disabled="!valid && loading" color="success" class="mr-4" @click="validate" :loading="loading">
-      {{texto_botao}}
+    <v-btn
+      id="envioLead"
+      :disabled="!valid && loading"
+      color="success"
+      class="mr-4"
+      @click="validate"
+      :loading="loading"
+    >
+      {{ texto_botao }}
     </v-btn>
   </v-form>
 </template>
 <script>
 export default {
-  props: ['texto_botao'],
+  props: ["texto_botao"],
   data: () => ({
     loading: false,
     valid: true,
@@ -44,21 +51,52 @@ export default {
       this.loading = false;
       this.$refs.form.resetValidation();
     },
-    async nameOfFunction(){
-      this.$nuxt.$loading.start()
+    async nameOfFunction() {
+      this.$nuxt.$loading.start();
       this.loading = true;
-    const post = await this.$axios.$post('https://api.issei.com.br/lead', 
-    {
-        email: this.email,
-    }, 
-     {}).then((result)=> {
-       console.log(result);
-       this.loading = false;
-       this.$nuxt.$loading.finish()
-       this.$router.push("/obrigado");
-     }
-     )
-}
+      this.$sha256(this.email).then((hashMail) => {
+        console.log(hashMail);
+        const data = {
+          data: [
+            {
+              event_name: "Lead",
+              event_time: Math.floor(new Date() / 1000),
+              action_source: "email",
+              user_data: {
+                em: [hashMail],
+              },
+              custom_data: {
+                currency: "BRL",
+                value: 1,
+              },
+            },
+          ],
+        };
+        this.$axios
+          .$post(
+            "https://graph.facebook.com/v12.0/232929938805467/events?access_token=EAAFlrX2sbZAsBADJSUyKGZC5IDuqPtr8KGjuvUElXI5rPTK3Y4FRwnZCpi5RZBAj66qTv9RrwpQUsd4QmkA9yzT6fxu84bPFCZAcM6JPOe1eJVZAgm7TACPf4GmsSeUIbvemhjhjh1KRQYnTg65i7MZAJZBZB3DOMpFrx7dFdULoqqoBCcwZCQetN0v5NON7KKwIQZD",
+            data,
+            {}
+          )
+          .then((resultEvent) => {
+            console.log(resultEvent);
+            this.$axios
+              .$post(
+                "https://api.issei.com.br/lead",
+                {
+                  email: this.email,
+                },
+                {}
+              )
+              .then((result) => {
+                console.log(result);
+                this.loading = false;
+                this.$nuxt.$loading.finish();
+                this.$router.push("/obrigado");
+              });
+          });
+      });
+    },
   },
 };
 </script>

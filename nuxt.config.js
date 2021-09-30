@@ -46,6 +46,7 @@ export default {
   plugins: [
     { src: '~/plugins/gtm.js', mode: 'client' },
     { src: '~/plugins/pixel.js', mode: 'client' },
+    { src: '~/plugins/crypto.js', mode: 'client' },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -88,7 +89,7 @@ export default {
       error: '#ff5722',
       warning: '#ff9800',
       info: '#009688',
-      success: '#8bc34a',
+      success: '#fbc439',
         }
       }
     }

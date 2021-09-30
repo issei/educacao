@@ -1,8 +1,8 @@
 <template>
  <v-responsive id="lead" 
-    :aspect-ratio="16 / 6"
+    :aspect-ratio="16 / 5"
     class="d-flex justify-center align-center mx-2 pa-2 my-2"
-    style="background: #deeeee;"
+    style="background: #55beb3; color: #FFFFFF;"
   >
     <v-container>
       <v-row align="center" justify="center">

@@ -13,6 +13,11 @@
 <script>
 
 export default {
+  mounted() {
+    /*
+     //this.$sha256('teste@teste.com.br').then((result)=>{console.log(result);});
+    */
+  },
   data() {
     return {
       //"O seu filho precisa estar preparado para o mundo digital"
@@ -22,7 +27,14 @@ export default {
       headline: {
         titulo: "O SEU FILHO PRECISA ESTAR PREPARADO PARA O MUNDO DIGITAL",
         subtitulo: "O curso de programação estimula habilidades essenciais para um futuro promissor",
-        texto_botao: "Lista de Espera"
+        texto_botao: "Lista de Espera",
+        imagem1: "./iconehome.png",
+        imagem3: "./img/undraw_Hello_re_3evm.svg",
+        imagem2: "./img/undraw_lightbulb_moment_re_ulyo.svg",
+        imagem4: "./img/undraw_Lost_online_re_upmy.svg",
+        imagem5: "./img/undraw_Online_learning_re_qw08.svg",
+        imagem6: "./img/undraw_Website_builder_re_ii6e.svg",
+        imagem: "./img/undraw_Coding_re_iv62.svg",
       },
       chamadaAcao:{
         titulo: "Como posso participar?",
@@ -31,11 +43,11 @@ export default {
       who:{
         titulo: "",
         foto: "",
-        texto: "<SPAN STYLE=\"font-weight:bold\">Maurício Issei</SPAN> é apaixonado por <SPAN STYLE=\"font-weight:bold\">tecnologia e inovação</SPAN>, atua na área <SPAN STYLE=\"font-weight:bold\">há mais de 15 anos.</SPAN> Como pai, se preocupa com o ensino das crianças, seu grande objetivo é ajudar elas a se prepararem para <SPAN STYLE=\"font-weight:bold\">um mundo totalmente digital.</SPAN>",
+        texto: "<SPAN STYLE=\"font-weight:bold\">Maurício Issei</SPAN> é Graduado em <SPAN STYLE=\"font-weight:bold\">Análise de Sistemas</span> e Pós-Graduado em <SPAN STYLE=\"font-weight:bold\">Big Data</span>.<br />Apaixonado por <SPAN STYLE=\"font-weight:bold\">tecnologia e inovação</SPAN>, atua na área <SPAN STYLE=\"font-weight:bold\">há mais de 15 anos.</SPAN> <br />Como pai, se preocupa com o ensino das crianças, seu grande objetivo é ajudar elas a se prepararem para <SPAN STYLE=\"font-weight:bold\">um mundo totalmente digital.</SPAN>",
       },
       what:{
-        titulo: "O que é este curso?",
-        texto: "Este curso traz o aluno para a linguagem do futuro, onde ele irá aprender conceitos básicos de programação, letramento digital e pensamento computacional. Nossos alunos são incentivados durante todo o curso a usar a imaginação, criatividade e pensamento crítico, habilidades fundamentais para os dias de hoje. Não acreditamos em teoria sem prática, aqui o seu filho aprende fazendo!",
+        titulo: "O que é o curso?",
+        texto: "É um curso <SPAN STYLE=\"font-weight:bold\">100% on-line</span> para criança e adolescentes que querem aprender o básico de programação.<p>Este curso traz o aluno para a linguagem do futuro, onde ele irá aprender o pensamento computacional,  codificação e cultura digital. Nossos alunos são incentivados durante todo o curso a usar a imaginação, criatividade e pensamento crítico, habilidades fundamentais para os dias de hoje.<BR/>Não acreditamos em teoria sem prática, aqui o seu filho aprende fazendo!</p>",
         imagem: "https://issei.imgix.net/banner-artwork.png?auto=compress&auto=format",
       },
       praquem: {
@@ -44,7 +56,7 @@ export default {
         {
           imagem: "https://issei.imgix.net/icones/jovem.png?auto=compress&auto=enhance&w=67&h=58",
           titulo: "Crianças e Adolescentes",
-          descricao: "O curso é indicado para crianças entre 9 a 14 anos"
+          descricao: "O curso é indicado para crianças entre 9 e 14 anos."
         },
         {
           imagem: "https://issei.imgix.net/icones/Acesso.png?auto=compress&auto=enhance&w=67&h=58",
@@ -77,33 +89,32 @@ export default {
         titulo: "O que este curso estimula?",
         items: [
           {
-          imagem: "https://issei.imgix.net/icons/2.png?auto=compress&auto=enhance&auto=format",
+          imagem: "https://issei.imgix.net/icons/criatividade.png?auto=compress&auto=enhance&auto=format",
           titulo: "Criatividade",
           descricao: "A programação estimula o cérebro do aluno a criar aplicações, dando vida às ideias e novas formas de se expressar. "
         },
-        
         {
-          imagem: "https://issei.imgix.net/icons/3.png?auto=compress&auto=enhance&auto=format",
+          imagem: "https://issei.imgix.net/icons/problema.png?auto=compress&auto=enhance&auto=format",
           titulo: "Resolução de Problemas",
-          descricao: "Seu filho aprenderá como analisar os cenários, propor ideias e como pratica-las."
+          descricao: "Irá aprender como analisar os cenários, propor ideias e como pôr em prática."
         },
         {
-          imagem: "https://issei.imgix.net/icons/4.png?auto=compress&auto=enhance&auto=format",
+          imagem: "https://issei.imgix.net/icons/futuro.png?auto=compress&auto=enhance&auto=format",
           titulo: "Futuro",
-          descricao: "O seu filho vai ter contato com as principais habilidades e competências do século 21"
+          descricao: "O aluno vai ter contato com as principais habilidades e competências do século XXI."
         },
         {
-          imagem: "https://issei.imgix.net/icons/1.png?auto=compress&auto=enhance&auto=format",
+          imagem: "https://issei.imgix.net/icons/empirico.png?auto=compress&auto=enhance&auto=format",
           titulo: "Aprendizado Empírico",
           descricao: "Acreditamos que os alunos aprendem de fato quando colocam em prática tudo aquilo que aprenderam, por isso colocamos desafios durante as aulas para eles evoluírem mais rápido."
         },
         {
-          imagem: "https://issei.imgix.net/icons/5.png?auto=compress&auto=enhance&auto=format",
+          imagem: "https://issei.imgix.net/icons/raciocinio.png?auto=compress&auto=enhance&auto=format",
           titulo: "Raciocínio Lógico",
           descricao: "Ao conhecer a linguagem de programação, os alunos são ensinados a pensar de forma estruturada e de como lidar com os erros."
         },
         {
-          imagem: "https://issei.imgix.net/icones/Icones%20Beneficios.png?auto=compress&auto=enhance&auto=format",
+          imagem: "https://issei.imgix.net/icons/escolar.png?auto=compress&auto=enhance&auto=format",
           titulo: "Incentiva o Aprendizado Escolar",
           descricao: "Ao começar a programar, a criança prepara o seu raciocínio lógico para aprender com mais facilidade as disciplinas das áreas de exatas, como Física, Química e Matemática."
         },
@@ -126,10 +137,18 @@ export default {
           pergunta: "Por que aprender programação e tecnologia ainda em idade escolar?",
           resposta: "Entre os muitos benefícios da lógica de programação podemos citar: desenvolvimento criativo, ampliação do raciocínio lógico e resolução de problemas. Saber programar é praticamente tão importante quanto dominar o inglês, uma vez que as empresas procuram cada vez mais por profissionais com essa habilidade. Inclusive, essa tendência tende a continuar crescente nos próximos anos. Por isso, investir na programação para crianças é uma forma de garantir ao seu filho um diferencial competitivo para quando ele entrar no mercado de trabalho."
         },
-      ],
-      titulos: [
-        "T-Shirts",
-        "Empoderando seu Estilo",
+        {
+          pergunta: "O curso oferece garantia?",
+          resposta: "Os novos alunos matriculados tem 14 dias para conhecer a nossa metodologia. Caso ele não goste do curso, você poderá enviar um e-mail para o nosso suporte e ter o reembolso do valor integral do curso."
+        },
+        {
+          pergunta: "Quando será aberta as inscrições para a próxima turma?",
+          resposta: "Avisaremos por e-mail quando iniciarmos as inscrições . Caso tenha interesse, cadastre-se na lista de espera."
+        },
+        {
+          pergunta: "Eu posso começar a fazer o Curso de Programação agora?",
+          resposta: "As inscrições não estão abertas, abriremos algumas vezes ao ano, pois dessa forma conseguimos nos organizar para receber todos os alunos com o maior nível de excelência possível. Caso tenha interesse em saber sobre a abertura das inscrições, cadastre-se na lista de espera."
+        },
       ],
     };
   },
