@@ -4,6 +4,7 @@
     <Head :headline="headline"></Head>
     <Beneficios :conteudo="praquem"></Beneficios> 
     <Oque :titulo="what.titulo" :texto="what.texto" :imagem="what.imagem"></Oque>
+    <Modulos></Modulos>
     <Beneficios :conteudo="conteudos"></Beneficios> 
     <CallToAction :titulo="chamadaAcao.titulo" :subtitulo="chamadaAcao.descricao"></CallToAction> 
     <Quemsomos :texto="who.texto"></Quemsomos>  
@@ -14,15 +15,11 @@
 
 export default {
   mounted() {
-    /*
-     //this.$sha256('teste@teste.com.br').then((result)=>{console.log(result);});
-    */
   },
   data() {
     return {
       //"O seu filho precisa estar preparado para o mundo digital"
       //"O curso de programação estimula habilidades essenciais para um futuro promissor"
-      //"O seu filho precisa estar preparado para o mundo digital"
       //"Quem aprende Programação desenvolve habilidades benéficas para a vida toda como racicínio lógico, criatividade e engenhosidade."
       headline: {
         titulo: "O SEU FILHO PRECISA ESTAR PREPARADO PARA O MUNDO DIGITAL",

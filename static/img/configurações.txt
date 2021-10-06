@@ -21,7 +21,7 @@
 token de conversão
 EAAFlrX2sbZAsBADJSUyKGZC5IDuqPtr8KGjuvUElXI5rPTK3Y4FRwnZCpi5RZBAj66qTv9RrwpQUsd4QmkA9yzT6fxu84bPFCZAcM6JPOe1eJVZAgm7TACPf4GmsSeUIbvemhjhjh1KRQYnTg65i7MZAJZBZB3DOMpFrx7dFdULoqqoBCcwZCQetN0v5NON7KKwIQZD
 
-Para enviar novos eventos, faça uma solicitação POST para a borda /events dessa API a partir deste caminho: https://graph.facebook.com/{API_VERSION}/{PIXEL_ID}/events?access_token={TOKEN}.
+Para enviar novos eventos, faça uma solicitação POST para a borda /events dessa API a partir deste caminho: https://graph.facebook.com/v12.0/232929938805467/events?access_token=EAAFlrX2sbZAsBADJSUyKGZC5IDuqPtr8KGjuvUElXI5rPTK3Y4FRwnZCpi5RZBAj66qTv9RrwpQUsd4QmkA9yzT6fxu84bPFCZAcM6JPOe1eJVZAgm7TACPf4GmsSeUIbvemhjhjh1KRQYnTg65i7MZAJZBZB3DOMpFrx7dFdULoqqoBCcwZCQetN0v5NON7KKwIQZD
 
 
 imagem: "./iconehome.png"
@@ -57,14 +57,11 @@ teste@teste.com.br
     "data": [
         {
             "event_name": "Purchase",
-            "event_time": 1632826936,
+            "event_time": new Date().getTime(),
             "action_source": "email",
             "user_data": {
                 "em": [
                     "2172498d4914b51e1d89a0f97957b035ac4938723a5cac208135d389b6972a6d"
-                ],
-                "ph": [
-                    null
                 ]
             },
             "custom_data": {
@@ -74,3 +71,5 @@ teste@teste.com.br
         }
     ]
 }
+
+aWQ9R1RNLTU5UVdHTEYmZW52PTEmYXV0aD0wRWtDNFhhem5oNldycFB4M1Q1dzVR
