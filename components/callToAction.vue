@@ -7,13 +7,14 @@
     <v-container>
       <v-row align="center" justify="center">
         <v-col class="text-center" cols="12">
-          <h1 class="d-flex justify-center align-center headline my-5">
+          <h1 class="d-flex justify-center align-center h3 my-4">
             {{ titulo }}
           </h1>
-          <span class="d-flex justify-center align-center subheading my-5">
+          <span class="d-flex justify-center align-center h3 my-4">
             {{subtitulo}}
           </span>
           <Lead texto_botao="Entre na lista de espera"></Lead>
+          <span class="caption">Ao inscrever-se em nossa lista, você concorda com nossa <NuxtLink to="/politica-de-privacidade">Política de Privacidade</NuxtLink>.</span>
         </v-col>
       </v-row>
       </v-container>

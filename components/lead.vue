@@ -3,9 +3,9 @@
     <v-text-field
       v-model="email"
       :rules="emailRules"
-      placeholder="preencha@email.com"
+      placeholder="Informe seu melhor email"
       filled
-      label="E-mail"
+      label="Informe seu melhor email"
       outlined
       required
       full-width
