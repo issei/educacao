@@ -2,7 +2,7 @@
  <v-responsive id="lead" 
     :aspect-ratio="16 / 5"
     class="d-flex justify-center align-center mx-2 pa-2 my-2"
-    style="background: #55beb3; color: #FFFFFF;"
+    :style="style"
   >
     <v-container>
       <v-row align="center" justify="center">
@@ -13,7 +13,7 @@
           <span class="d-flex justify-center align-center h3 my-4">
             {{subtitulo}}
           </span>
-          <Lead texto_botao="Entre na lista de espera"></Lead>
+          <Lead texto_botao="Entre na lista de espera" :color="btnColor"></Lead>
           <span class="caption">Ao inscrever-se em nossa lista, você concorda com nossa <NuxtLink to="/politica-de-privacidade">Política de Privacidade</NuxtLink>.</span>
         </v-col>
       </v-row>
@@ -23,7 +23,7 @@
 <script>
 import Lead from "~/components/lead.vue";
 export default {
-  props: ["titulo", "subtitulo"],
+  props: ["titulo", "subtitulo", "style", "btnColor"],
   components: {
     Lead,
   },

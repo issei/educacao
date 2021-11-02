@@ -15,7 +15,7 @@
     <v-btn
       id="envioLead"
       :disabled="!valid && loading"
-      color="success"
+      :color="color"
       class="mr-4"
       @click="validate"
       :loading="loading"
@@ -26,7 +26,7 @@
 </template>
 <script>
 export default {
-  props: ["texto_botao"],
+  props: ["texto_botao","color"],
   data: () => ({
     loading: false,
     valid: true,

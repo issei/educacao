@@ -26,7 +26,7 @@
 
           <v-sheet width="100%" class="pl-3 justify-space-around">
             <span class="font-weight-black">{{ item.titulo }}</span>
-            <p>{{ item.descricao }}</p>
+            <p v-html="item.descricao"></p>
           </v-sheet>
         </v-col>
       </v-row>

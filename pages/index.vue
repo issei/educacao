@@ -6,8 +6,8 @@
     <Oque :titulo="what.titulo" :texto="what.texto" :imagem="what.imagem"></Oque>
     <Modulos></Modulos>
     <Beneficios :conteudo="conteudos"></Beneficios> 
-    <CallToAction :titulo="chamadaAcao.titulo" :subtitulo="chamadaAcao.descricao"></CallToAction> 
-    <Quemsomos :texto="who.texto"></Quemsomos>  
+    <CallToAction :titulo="chamadaAcao.titulo" :subtitulo="chamadaAcao.descricao" :style="chamadaAcao.style" :btnColor="chamadaAcao.btnColor"></CallToAction> 
+    <Quemsomos :texto="who.texto" :foto="who.foto"></Quemsomos>  
     <Faq :perguntas="faqs"></Faq>
 </v-main>
 </template>
@@ -22,9 +22,11 @@ export default {
       //"O curso de programação estimula habilidades essenciais para um futuro promissor"
       //"Quem aprende Programação desenvolve habilidades benéficas para a vida toda como racicínio lógico, criatividade e engenhosidade."
       headline: {
-        titulo: "O SEU FILHO PRECISA ESTAR PREPARADO PARA O MUNDO DIGITAL",
+        titulo: "O SEU FILHO PRECISA APROVEITAR O MELHOR DO MUNDO DIGITAL",
         subtitulo: "O curso de programação estimula habilidades essenciais para um futuro promissor",
         texto_botao: "Lista de Espera",
+        style: "background: #55beb3; color: #FFFFFF;",
+        btnColor: "success",
         imagem1: "./iconehome.png",
         imagem3: "./img/undraw_Hello_re_3evm.svg",
         imagem2: "./img/undraw_lightbulb_moment_re_ulyo.svg",
@@ -34,12 +36,14 @@ export default {
         imagem: "./img/undraw_Coding_re_iv62.svg",
       },
       chamadaAcao:{
-        titulo: "Como posso participar?",
-        descricao: "Cadastre-se na lista de espera para ser avisado da próxima turma."
+        titulo: "Como participar?",
+        descricao: "Cadastre-se na lista de espera para ser avisado da próxima turma.",
+        style: "background: #55beb3; color: #FFFFFF;",
+        btnColor: "success"
       },
       who:{
         titulo: "",
-        foto: "",
+        foto: "https://issei.imgix.net/issei.png?auto=compress&auto=enhance&mask=ellipse&w=300&h=300",
         texto: "<SPAN STYLE=\"font-weight:bold\">Maurício Issei</SPAN> é Graduado em <SPAN STYLE=\"font-weight:bold\">Análise de Sistemas</span> e Pós-Graduado em <SPAN STYLE=\"font-weight:bold\">Big Data</span>.<br />Apaixonado por <SPAN STYLE=\"font-weight:bold\">tecnologia e inovação</SPAN>, atua na área <SPAN STYLE=\"font-weight:bold\">há mais de 15 anos.</SPAN> <br />Como pai, se preocupa com o ensino das crianças, seu grande objetivo é ajudar elas a se prepararem para <SPAN STYLE=\"font-weight:bold\">um mundo totalmente digital.</SPAN>",
       },
       what:{
