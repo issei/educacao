@@ -10,7 +10,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s',
-    title: 'educa',
+    title: 'issei.com.br',
     htmlAttrs: {
       lang: 'pt-BR'
     },
@@ -27,7 +27,6 @@ export default {
       { hid: 'og:locale', name: 'og:locale', content: 'pt_BR' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
       { hid: 'og:url', name: 'og:url', content: 'https://www.issei.com.br' },
-      { hid: 'article:publisher', name: 'article:publisher', content: 'https://www.facebook.com/mauricioissei/' },
       { hid: 'article:modified_time', name: 'article:modified_time', content: '2021-08-25T17:18:35+00:00' },
       { hid: 'og:image', name: 'og:image', content: '' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },

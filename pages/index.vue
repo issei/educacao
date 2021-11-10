@@ -1,123 +1,110 @@
 <template>
 <v-main >
-
-    <Head :headline="headline"></Head>
+    <HeadWhats :headline="headline"></HeadWhats>
+    <ListaItens :titulo="praquemeh.titulo" :itens="praquemeh.itens" :imagem="praquemeh.imagem"></ListaItens>
+    <Compara :conteudo="praquem" :conteudo2="conteudos" :estilo="headline.style"></Compara> 
+    <!--
     <Beneficios :conteudo="praquem"></Beneficios> 
-    <Oque :titulo="what.titulo" :texto="what.texto" :imagem="what.imagem"></Oque>
-    <Modulos></Modulos>
+    <Boxes :conteudo="conteudos"></Boxes>  
     <Beneficios :conteudo="conteudos"></Beneficios> 
     <CallToAction :titulo="chamadaAcao.titulo" :subtitulo="chamadaAcao.descricao" :style="chamadaAcao.style" :btnColor="chamadaAcao.btnColor"></CallToAction> 
+    -->
     <Quemsomos :texto="who.texto" :foto="who.foto"></Quemsomos>  
-    <Faq :perguntas="faqs"></Faq>
+    <v-row justify="center" class="mt-5">
+      <BtnWhats :btnColor="headline.btnColor" class="mr-4" :texto_botao="headline.texto_botao"></BtnWhats>
+    </v-row>
 </v-main>
 </template>
 <script>
 
 export default {
+  layout: 'servico',
   mounted() {
   },
   data() {
     return {
-      //"O seu filho precisa estar preparado para o mundo digital"
-      //"O curso de programação estimula habilidades essenciais para um futuro promissor"
-      //"Quem aprende Programação desenvolve habilidades benéficas para a vida toda como racicínio lógico, criatividade e engenhosidade."
+      //"VOCÊ QUER UM MOVIMENTO, INSPIRAR E TRANSFORMAR PESSOAS ATRAVÉS DO SEU CONHECIMENTO"
+      //"Transforme sua PAIXÃO em um Curso Digital e conquiste sua liberdade financeira"
+      //"TRANSFORME A SUA EXPERIÊNCIA PROFISSIONAL E UM CURSO ON-LINE E CONQUISTE A SUA LIBERDADE FINANCEIRA"
       headline: {
-        titulo: "O SEU FILHO PRECISA APROVEITAR O MELHOR DO MUNDO DIGITAL",
-        subtitulo: "O curso de programação estimula habilidades essenciais para um futuro promissor",
-        texto_botao: "Lista de Espera",
-        style: "background: #55beb3; color: #FFFFFF;",
-        btnColor: "success",
-        imagem1: "./iconehome.png",
-        imagem3: "./img/undraw_Hello_re_3evm.svg",
-        imagem2: "./img/undraw_lightbulb_moment_re_ulyo.svg",
-        imagem4: "./img/undraw_Lost_online_re_upmy.svg",
-        imagem5: "./img/undraw_Online_learning_re_qw08.svg",
-        imagem6: "./img/undraw_Website_builder_re_ii6e.svg",
-        imagem: "./img/undraw_Coding_re_iv62.svg",
+        titulo: "<SPAN STYLE=\"font-weight:bold\">Transforme</SPAN> a sua <SPAN STYLE=\"font-weight:bold\">experiência profissional</SPAN> em um <SPAN STYLE=\"font-weight:bold\">curso on-line</SPAN> e <SPAN STYLE=\"font-weight:bold\">conquiste</SPAN> a sua <SPAN STYLE=\"font-weight:bold\">liberdade financeira</SPAN>",
+        subtitulo: "Vamos tirar essa <SPAN STYLE=\"font-weight:bold\">ideia do papel</SPAN> e <SPAN STYLE=\"font-weight:bold\">construir</SPAN> um <SPAN STYLE=\"font-weight:bold\">negócio de sucesso</SPAN>?",
+        texto_botao: "Vamos conversar",
+        btnColor: "#03989e",
+        style: "background-image: url('./fundomadeira.png'); background-position: center; background-repeat: no-repeat;  background-size: cover; background: #DDDDDD; color: #000000;",
+        imagem: "./img/undraw_note.svg",
+      },
+      praquemeh:{
+        titulo: "PARA QUEM É?",
+        imagem: "https://issei.imgix.net/talita/grafico-up.png?auto=compress&auto=enhance&w=300&h=300",
+        itens: [
+          {
+            texto: "Para quem quer transformar a sua experiência profissional em um curso on-line mas não tem clareza de qual caminho seguir.",
+            imagem: "https://issei.imgix.net/talita/check-verde.png?auto=compress&auto=enhance&w=67&h=58"
+          },
+          {
+            texto: "Busca uma parceria para executar o lançamento do seu curso on-line de ponta a ponta com sucesso.",
+            imagem: "https://issei.imgix.net/talita/check-verde.png?auto=compress&auto=enhance&w=67&h=58"
+          },
+          {
+            texto: "Quer usar o poder da internet para escalar as vendas do seu curso on-line.",
+            imagem: "https://issei.imgix.net/talita/check-verde.png?auto=compress&auto=enhance&w=67&h=58"
+          }
+        ]
       },
       chamadaAcao:{
         titulo: "Como participar?",
         descricao: "Cadastre-se na lista de espera para ser avisado da próxima turma.",
-        style: "background: #55beb3; color: #FFFFFF;",
-        btnColor: "success"
+        style: "background: #FFFFFF; color: #000000;",
+        btnColor: "#03989e"
       },
       who:{
         titulo: "",
-        foto: "https://issei.imgix.net/issei.png?auto=compress&auto=enhance&mask=ellipse&w=300&h=300",
-        texto: "<SPAN STYLE=\"font-weight:bold\">Maurício Issei</SPAN> é Graduado em <SPAN STYLE=\"font-weight:bold\">Análise de Sistemas</span> e Pós-Graduado em <SPAN STYLE=\"font-weight:bold\">Big Data</span>.<br />Apaixonado por <SPAN STYLE=\"font-weight:bold\">tecnologia e inovação</SPAN>, atua na área <SPAN STYLE=\"font-weight:bold\">há mais de 15 anos.</SPAN> <br />Como pai, se preocupa com o ensino das crianças, seu grande objetivo é ajudar elas a se prepararem para <SPAN STYLE=\"font-weight:bold\">um mundo totalmente digital.</SPAN>",
+        foto: "https://issei.imgix.net/talita/Talita.png?auto=compress&auto=enhance&mask=ellipse&w=300&h=300",
+        texto: "<p>Olá, muito prazer! Sou a Talita Issei.</p><p>Depois de 13 anos de experiência na área de Recursos Humanos, sendo 4 anos em Gerenciamento de Projetos, resolvi \"largar\" a CLT e <SPAN STYLE=\"font-weight:bold\">Empreender</SPAN>.</p><p>Há 6 meses estudo e aplico o <SPAN STYLE=\"font-weight:bold\">Marketing Digital</SPAN> em projetos pontuais. Nesse período, identifiquei uma grande oportunidade em me tornar uma <SPAN STYLE=\"font-weight:bold\">Estrategista Digital</SPAN>. Foi então que decidi entrar para a Escola da Arte e estudar estratégias para lançamentos. Atualmente estou  acompanhando 6 lançamentos de ponta a ponta de cursos on-line (de nichos diferentes).</p><p>Meu objetivo é <SPAN STYLE=\"font-weight:bold\">colocar em prática</SPAN> tudo aquilo que aprendi e estou aprendendo,  procuro uma Expert/Especialista que tenha interesse em <SPAN STYLE=\"font-weight:bold\">transformar a sua experiência</SPAN> em um <SPAN STYLE=\"font-weight:bold\">curso digital</SPAN>, e assim, formarmos uma grande parceria.</p><p>E agora, convido você, vamos <SPAN STYLE=\"font-weight:bold\">construir</SPAN> um <SPAN STYLE=\"font-weight:bold\">projeto de sucesso</SPAN>?!</p>",
       },
       what:{
-        titulo: "O que é o curso?",
-        texto: "É um curso <SPAN STYLE=\"font-weight:bold\">100% on-line</span> para criança e adolescentes que querem aprender o básico de programação.<p>Este curso traz o aluno para a linguagem do futuro, onde ele irá aprender o pensamento computacional,  codificação e cultura digital. Nossos alunos são incentivados durante todo o curso a usar a imaginação, criatividade e pensamento crítico, habilidades fundamentais para os dias de hoje.<BR/>Não acreditamos em teoria sem prática, aqui o seu filho aprende fazendo!</p>",
-        imagem: "https://issei.imgix.net/banner-artwork.png?auto=compress&auto=format",
+        titulo: "Para quem é?",
+        texto: "Você tem alguma agência ou pessoa responsável pela sua estratégia de venda?<br />Vejo que você tem muito potencial, se alinhar o seu conteúdo com uma boa estratégia de venda você pode ter muito mais resultado e alcançar muito mais pessoas. Se tiver interesse no Dia tal eu tenho um horário, podemos marcar uma call e conversarmos sobre o que eu imagino que pode ser feito para impulsionar suas redes, quem sabe rola uma parceria",
+        imagem: "./img/undraw_stepping_up_g6oo.svg",
       },
       praquem: {
-        titulo: "Como funciona o curso?",
+        titulo: "BUSCO ALGUÉM QUE:",
         items: [
         {
-          imagem: "https://issei.imgix.net/icones/jovem.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Crianças e Adolescentes",
-          descricao: "O curso é indicado para crianças entre 9 e 14 anos."
+          imagem: "https://issei.imgix.net/talita/pensamento.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Interessado",
+          descricao: "Tenha <SPAN STYLE=\"font-weight:bold\">interesse</SPAN> e uma <SPAN STYLE=\"font-weight:bold\">metodologia</SPAN> de transformar a sua <SPAN STYLE=\"font-weight:bold\">experiência</SPAN> em um <SPAN STYLE=\"font-weight:bold\">curso on-line</SPAN>"
         },
         {
-          imagem: "https://issei.imgix.net/icones/Acesso.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Acesso Imediato",
-          descricao: "O login e senha serão enviados no seu e-mail, após o processamento do pagamento."
+          imagem: "https://issei.imgix.net/talita/quebra-cabeca.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Comprometido",
+          descricao: "Busque uma <SPAN STYLE=\"font-weight:bold\">parceria</SPAN> para lançar o seu curso on-line"
         },
         {
-          imagem: "https://issei.imgix.net/icones/Formato.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Formato",
-          descricao: "Nosso curso é 100% on-line e gravado, seu filho pode fazer conforme a disponibilidade de horário dele, além de conseguir rever as aulas."
-        },
-        {
-          imagem: "https://issei.imgix.net/icones/Conhecimento.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Conhecimento",
-          descricao: "O curso é para crianças e adolescentes que tenham interesse e querem aprender conceitos de programação, não precisa de conhecimento em tecnologia."
-        },
-        {
-          imagem: "https://issei.imgix.net/icones/Suporte.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Suporte",
-          descricao: "Seu filho terá as dúvidas respondidas diretamente com o professor através do WhatsApp e E-mail."
-        },
-        {
-          imagem: "https://issei.imgix.net/icones/Ferramenta.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Ferramentas",
-          descricao: "Não requer instalação e nem compra de software. É necessário internet e um computador para realizar as atividades."
+          imagem: "https://issei.imgix.net/talita/engine.png?auto=compress&auto=enhance&w=67&h=58",
+          titulo: "Determinado",
+          descricao: "Tenha <SPAN STYLE=\"font-weight:bold\">disponibilidade</SPAN> e <SPAN STYLE=\"font-weight:bold\">paixão</SPAN> para fazer acontecer!"
         },
       ],
       },
       conteudos: {
-        titulo: "O que este curso estimula?",
+        titulo: "CONTE COMIGO!",
         items: [
           {
-          imagem: "https://issei.imgix.net/icons/criatividade.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Criatividade",
-          descricao: "A programação estimula o cérebro do aluno a criar aplicações, dando vida às ideias e novas formas de se expressar. "
+          imagem: "https://issei.imgix.net/talita/check-calendar.png?auto=compress&auto=enhance&auto=format",
+          titulo: "",
+          descricao: "<SPAN STYLE=\"font-weight:bold\">Fase de Preparação:</SPAN><BR/> Estratégias/Planejamento do Lançamento,  Cronograma de Atividades e Página do Evento."
         },
         {
-          imagem: "https://issei.imgix.net/icons/problema.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Resolução de Problemas",
-          descricao: "Irá aprender como analisar os cenários, propor ideias e como pôr em prática."
+          imagem: "https://issei.imgix.net/talita/peça.png?auto=compress&auto=enhance&auto=format",
+          titulo: "",
+          descricao: "<SPAN STYLE=\"font-weight:bold\">Gestão de Tráfego Pago:</SPAN><BR/> Google ADS, Facebook/Instagram e YouTube"
         },
         {
-          imagem: "https://issei.imgix.net/icons/futuro.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Futuro",
-          descricao: "O aluno vai ter contato com as principais habilidades e competências do século XXI."
-        },
-        {
-          imagem: "https://issei.imgix.net/icons/empirico.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Aprendizado Empírico",
-          descricao: "Acreditamos que os alunos aprendem de fato quando colocam em prática tudo aquilo que aprenderam, por isso colocamos desafios durante as aulas para eles evoluírem mais rápido."
-        },
-        {
-          imagem: "https://issei.imgix.net/icons/raciocinio.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Raciocínio Lógico",
-          descricao: "Ao conhecer a linguagem de programação, os alunos são ensinados a pensar de forma estruturada e de como lidar com os erros."
-        },
-        {
-          imagem: "https://issei.imgix.net/icons/escolar.png?auto=compress&auto=enhance&auto=format",
-          titulo: "Incentiva o Aprendizado Escolar",
-          descricao: "Ao começar a programar, a criança prepara o seu raciocínio lógico para aprender com mais facilidade as disciplinas das áreas de exatas, como Física, Química e Matemática."
+          imagem: "https://issei.imgix.net/talita/objetivo.png?auto=compress&auto=enhance&auto=format",
+          titulo: "",
+          descricao: "<SPAN STYLE=\"font-weight:bold\">Comprometimento e Disciplina:</SPAN><BR/> Estou 101% comprometida em transformar o meu conhecimento em um negócio de muito sucesso."
         },
       ],
       },
