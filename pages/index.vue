@@ -1,7 +1,7 @@
 <template>
 <v-main >
     <HeadWhats :headline="headline"></HeadWhats>
-    <ListaItens :titulo="praquemeh.titulo" :itens="praquemeh.itens" :imagem="praquemeh.imagem"></ListaItens>
+    <ListaItens :titulo="praquemeh.titulo" :itens="praquemeh.itens" :imagem="praquemeh.imagem" :btnColor="headline.btnColor" :texto_botao="headline.texto_botao"></ListaItens>
     <Compara :conteudo="praquem" :conteudo2="conteudos" :estilo="headline.style"></Compara> 
     <!--
     <Beneficios :conteudo="praquem"></Beneficios> 
@@ -9,10 +9,8 @@
     <Beneficios :conteudo="conteudos"></Beneficios> 
     <CallToAction :titulo="chamadaAcao.titulo" :subtitulo="chamadaAcao.descricao" :style="chamadaAcao.style" :btnColor="chamadaAcao.btnColor"></CallToAction> 
     -->
-    <Quemsomos :texto="who.texto" :foto="who.foto"></Quemsomos>  
-    <v-row justify="center" class="mt-5">
-      <BtnWhats :btnColor="headline.btnColor" class="mr-4" :texto_botao="headline.texto_botao"></BtnWhats>
-    </v-row>
+
+    <Quemsomos :texto="who.texto" :foto="who.foto"></Quemsomos>      
 </v-main>
 </template>
 <script>
@@ -26,9 +24,10 @@ export default {
       //"VOCÊ QUER UM MOVIMENTO, INSPIRAR E TRANSFORMAR PESSOAS ATRAVÉS DO SEU CONHECIMENTO"
       //"Transforme sua PAIXÃO em um Curso Digital e conquiste sua liberdade financeira"
       //"TRANSFORME A SUA EXPERIÊNCIA PROFISSIONAL E UM CURSO ON-LINE E CONQUISTE A SUA LIBERDADE FINANCEIRA"
+      //titulo: "<SPAN STYLE=\"font-weight:bold\">Transforme</SPAN> a sua <SPAN STYLE=\"font-weight:bold\">experiência profissional</SPAN> em um <SPAN STYLE=\"font-weight:bold\">curso on-line</SPAN> e <SPAN STYLE=\"font-weight:bold\">conquiste</SPAN> a sua <SPAN STYLE=\"font-weight:bold\">liberdade financeira</SPAN>",
       headline: {
-        titulo: "<SPAN STYLE=\"font-weight:bold\">Transforme</SPAN> a sua <SPAN STYLE=\"font-weight:bold\">experiência profissional</SPAN> em um <SPAN STYLE=\"font-weight:bold\">curso on-line</SPAN> e <SPAN STYLE=\"font-weight:bold\">conquiste</SPAN> a sua <SPAN STYLE=\"font-weight:bold\">liberdade financeira</SPAN>",
-        subtitulo: "Vamos tirar essa <SPAN STYLE=\"font-weight:bold\">ideia do papel</SPAN> e <SPAN STYLE=\"font-weight:bold\">construir</SPAN> um <SPAN STYLE=\"font-weight:bold\">negócio de sucesso</SPAN>?",
+        titulo: "<SPAN STYLE=\"font-weight:bold\">Transforme a sua experiência profissional em um curso on-line e conquiste a sua liberdade financeira</SPAN>",
+        subtitulo: "Vamos tirar essa ideia do papel e construir um negócio de sucesso?",
         texto_botao: "Vamos conversar",
         btnColor: "#03989e",
         style: "background-image: url('./fundomadeira.png'); background-position: center; background-repeat: no-repeat;  background-size: cover; background: #DDDDDD; color: #000000;",
@@ -73,17 +72,17 @@ export default {
         items: [
         {
           imagem: "https://issei.imgix.net/talita/pensamento.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Interessado",
+          titulo: "",
           descricao: "Tenha <SPAN STYLE=\"font-weight:bold\">interesse</SPAN> e uma <SPAN STYLE=\"font-weight:bold\">metodologia</SPAN> de transformar a sua <SPAN STYLE=\"font-weight:bold\">experiência</SPAN> em um <SPAN STYLE=\"font-weight:bold\">curso on-line</SPAN>"
         },
         {
           imagem: "https://issei.imgix.net/talita/quebra-cabeca.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Comprometido",
+          titulo: "",
           descricao: "Busque uma <SPAN STYLE=\"font-weight:bold\">parceria</SPAN> para lançar o seu curso on-line"
         },
         {
           imagem: "https://issei.imgix.net/talita/engine.png?auto=compress&auto=enhance&w=67&h=58",
-          titulo: "Determinado",
+          titulo: "",
           descricao: "Tenha <SPAN STYLE=\"font-weight:bold\">disponibilidade</SPAN> e <SPAN STYLE=\"font-weight:bold\">paixão</SPAN> para fazer acontecer!"
         },
       ],
@@ -94,17 +93,17 @@ export default {
           {
           imagem: "https://issei.imgix.net/talita/check-calendar.png?auto=compress&auto=enhance&auto=format",
           titulo: "",
-          descricao: "<SPAN STYLE=\"font-weight:bold\">Fase de Preparação:</SPAN><BR/> Estratégias/Planejamento do Lançamento,  Cronograma de Atividades e Página do Evento."
+          descricao: "<SPAN STYLE=\"font-weight:bold\">Fase de Preparação:</SPAN> Estratégias do Lançamento,  Cronograma de Atividades e Página do Evento."
         },
         {
           imagem: "https://issei.imgix.net/talita/peça.png?auto=compress&auto=enhance&auto=format",
           titulo: "",
-          descricao: "<SPAN STYLE=\"font-weight:bold\">Gestão de Tráfego Pago:</SPAN><BR/> Google ADS, Facebook/Instagram e YouTube"
+          descricao: "<SPAN STYLE=\"font-weight:bold\">Gestão de Tráfego Pago:</SPAN> Google ADS, Facebook/Instagram e YouTube"
         },
         {
           imagem: "https://issei.imgix.net/talita/objetivo.png?auto=compress&auto=enhance&auto=format",
           titulo: "",
-          descricao: "<SPAN STYLE=\"font-weight:bold\">Comprometimento e Disciplina:</SPAN><BR/> Estou 101% comprometida em transformar o meu conhecimento em um negócio de muito sucesso."
+          descricao: "<SPAN STYLE=\"font-weight:bold\">Comprometimento e Disciplina:</SPAN> Estou 101% comprometida em transformar o meu conhecimento em um negócio de muito sucesso."
         },
       ],
       },

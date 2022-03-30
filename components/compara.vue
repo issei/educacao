@@ -14,10 +14,10 @@
           <v-col
             v-for="(item, i) in conteudo.items"
             :key="i"
-            class="d-inline-flex align-self-auto align-center"
+            class="d-inline-flex align-self-auto align-center align-stretch"
           >
             <v-img :src="item.imagem" width="67" height="58"></v-img>
-            <v-sheet width="100%" class="pl-3 justify-space-around">
+            <v-sheet width="100%" class="pl-3 justify-space-around" min-height="80">
               <span class="font-weight-black">{{ item.titulo }}</span>
               <p v-html="item.descricao"></p>
             </v-sheet>
@@ -32,10 +32,10 @@
             <v-col
             v-for="(item, i) in conteudo2.items"
             :key="i"
-            class="d-inline-flex align-self-auto align-center"
+            class="d-inline-flex align-self-auto align-center align-stretch"
           >
             <v-img :src="item.imagem" width="67" height="58"></v-img>
-            <v-sheet width="100%" class="pl-3 justify-space-around">
+            <v-sheet width="100%" class="pl-3 justify-space-around" min-height="80">
               <span class="font-weight-black">{{ item.titulo }}</span>
               <p v-html="item.descricao"></p>
             </v-sheet>
