@@ -28,12 +28,14 @@ export default ({ app }) => {
       "https://connect.facebook.net/en_US/fbevents.js"
     );
     fbq("init", "232929938805467");
+
+    if (process.env.NODE_ENV == "development") return;
    
     app.router.afterEach((to, from) => {
       /*
        ** Fire a page view on each route change
        */
-      //console.log("fire pageview");
-      //fbq("track", "PageView");
+       console.log("fire pageview");
+       fbq("track", "PageView");
     });
   };

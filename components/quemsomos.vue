@@ -11,7 +11,7 @@
                 <p v-html="texto"></p></v-card>
             </v-row>
              <v-row justify="center">
-              <BtnWhats btnColor="#03989e" class="mr-4" texto_botao="Vamos conversar"></BtnWhats>
+              <BtnWhats btnColor="#5fd9c2" class="mr-4" texto_botao="Vamos conversar"></BtnWhats>
             </v-row>
             </v-container>
   </v-responsive>

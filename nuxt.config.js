@@ -26,7 +26,7 @@ export default {
       { hid: 'copyright', name: 'copyright', content: 'issei.com.br' },
       { hid: 'og:locale', name: 'og:locale', content: 'pt_BR' },
       { hid: 'og:type', name: 'og:type', content: 'website' },
-      { hid: 'og:url', name: 'og:url', content: 'https://www.issei.com.br' },
+      { hid: 'og:url', name: 'og:url', content: 'https://issei.com.br' },
       { hid: 'article:modified_time', name: 'article:modified_time', content: '2021-08-25T17:18:35+00:00' },
       { hid: 'og:image', name: 'og:image', content: '' },
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
@@ -62,6 +62,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
+    '@nuxtjs/google-gtag'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -95,7 +96,7 @@ export default {
   },
 
   sitemap: {
-    hostname: 'https://www.issei.com.br',
+    hostname: 'https://issei.com.br',
     gzip: true,
     exclude: [
       '/admin/**'
@@ -104,5 +105,24 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  'google-gtag': {
+    id: 'G-3XV0HLZNLK',
+    config: {
+      anonymize_ip: true, // anonymize IP 
+      send_page_view: false, // might be necessary to avoid duplicated page track on page reload
+      linker: {
+        domains: ['issei.com.br']
+      }
+    },
+    debug: true, // enable to track in dev mode
+    disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
+    additionalAccounts: [{
+      id: 'AW-1039538566', // required if you are adding additional accounts
+      config: {
+        send_page_view: true // optional configurations
+      }
+    }]
+  },
 }

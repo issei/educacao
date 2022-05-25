@@ -11,7 +11,8 @@
         </v-col>
         <v-col class="d-flex align-stretch flex-column justify-center align-center pb-1">
           <v-col v-for="(item, i) in itens" :key="i" class="d-flex flex-row">
-            <v-img :src="item.imagem" width="67" height="58" class="mr-5"></v-img>
+            <!--v-img :src="item.imagem" width="67" height="58" class="mr-5"></v-img-->
+            <v-icon large class="mr-5">mdi-check</v-icon>
             <p v-html="item.texto"></p>
           </v-col>
         </v-col>
