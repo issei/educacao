@@ -21,80 +21,52 @@
             
           </v-col>
           <v-col lg="6" md="12" sm="12" xs="12">
-            <v-form v-model="valid" ref="form" id="formulario">
-              <v-hover v-slot="{ hover }">
-                <v-card full-width color="#FFFFFF" :elevation="hover ? 16 : 2" class="pb-2">
-                      
-                    <v-card-text width="100%">
-                      <p style="color:#233a5a" class="font-weight-bold text-center justify-center subtitle-2">Preencha seus dados para baixar o Material Gratuito</p>
-                      <span style="color:#233a5a" class="font-weight-bold">* Qual seu melhor email?</span>
-                        <v-text-field 
-                                v-model="email"
-                                :rules="emailRules"
-                                outlined
-                                color="#000000"
-                                filled
-                                required
-                                dense
-                                background-color="white"
-                        >
-                        <template v-slot:label>
-                          
-                        </template>
-                        </v-text-field>
-                        <span style="color:#233a5a" class="font-weight-bold">* Nome</span>
-                        <v-text-field 
-                                v-model="nome"
-                                :rules="nameRules"
-                                outlined
-                                filled
-                                color="#000000"
-                                required
-                                dense
-                                background-color="white"
-                        ><template v-slot:label>
-                          
-                        </template>
-                        </v-text-field>
-                        <span style="color:#233a5a" class="font-weight-bold">* Me conta aqui quais são as suas maiores dificuldades para lançar o seu curso on-line?</span>
-                        <v-text-field
-                            v-model="dificuldades"
-                            :rules="[v => !!v || 'Informe']"
-                            outlined
-                            required
-                            filled
-                            color="#000000"
-                            dense
-                            background-color="white"
-                        ><template v-slot:label>
-                          
-                        </template>
-                        </v-text-field>
-                        <span style="color:#233a5a" class="font-weight-bold">* Qual o seu maior desejo em lançar um produto digital?</span>
-                        <v-text-field
-                            v-model="desejo"
-                            :rules="[v => !!v || 'Informe']"
-                            outlined
-                            required
-                            filled
-                            color="#000000"
-                            dense
-                            background-color="white"
-                        ><template v-slot:label>
-                          
-                        </template>
-                        </v-text-field>
-                    </v-card-text>
-                    <v-card-actions class="justify-center"><v-btn @click="getEbook" color="#d9a7ab" style="color:#FFFFFF;" rounded width="300" height="50">QUERO MEU E-BOOK GRÁTIS!</v-btn></v-card-actions>
-                </v-card>
-                </v-hover>
-            </v-form>
           </v-col>
         </v-row>
          
       </v-container>
     </v-responsive>
     <!--HEAD-->
+    <v-responsive
+    :aspect-ratio="16 / 6"
+    class="d-flex justify-center align-center pa-2"
+    style="background-color: #233a5a; color: #FFFFFF"
+  >
+    <v-container>
+      <h1 class="d-flex justify-center align-center headline">A CONSULTORIA APc é para você que...</h1>
+      <v-row class="d-flex justify-center my-10">
+        <v-col class="d-flex align-stretch flex-column justify-center align-center pb-1">
+          <v-col v-for="(item, i) in listacheck" :key="i" class="d-flex flex-row">
+            <v-icon large class="mr-5">mdi-check</v-icon>
+            <p v-html="item.texto"></p>
+          </v-col>
+        </v-col>
+      </v-row>
+      <v-row justify="center" class="mt-1">
+        <BtnWhats :btnColor="btnColor" class="mr-4" texto_botao="texto"></BtnWhats>
+      </v-row>
+    </v-container>
+  </v-responsive>
+
+  <v-responsive :aspect-ratio="16 / 5" class="d-flex justify-center align-center pt-10 pb-10" style="background: #FFFFFF; color: #3e1607;">
+    <v-container>
+      <h1 class="d-flex justify-center align-center text-md-h4 text-sm-h4" style="font-weight:bold">COMO FUNCIONA A CONSULTORIA APc?</h1>
+        <v-row class="d-flex justify-center align-center my-5">
+            <h1 class="d-flex justify-center align-center headline"  style="color: black">
+                
+            </h1>
+        </v-row>
+        <v-row class="d-flex justify-center align-center">
+            <v-card class="ma-2 rounded-xl " width="350" height="350" v-for="(item, i) in cards" :key="i" >
+                <v-card-text class="d-flex flex-column justify-center align-center justify-space-between justify-space-around ">
+                    <p v-html="item.titulo" class="mt-5 text-center text-h5" style="font-weight:bold;color:#000000"></p>
+                    <p v-html="item.texto" class="mt-5 text-center text-h6" style="color:#000000"></p>
+                </v-card-text>
+            </v-card>
+        </v-row>
+    </v-container>
+  </v-responsive>
+
     <v-responsive
     :aspect-ratio="16 / 5"
     style="background: #233a5a; color: #ffffff;"
@@ -185,7 +157,6 @@ export default {
       async submit() {
         this.$nuxt.$loading.start();
           this.$gtag('event', 'Lead', { "email": this.email});
-          this.$fbq('track', 'Subscribe', {currency: "BRL", value: 1.00});
           this.$axios.$post(
               "https://api.issei.com.br/lead/ebook",
               {
@@ -218,18 +189,26 @@ export default {
   data() {
     return {
       valid: false,
-      email: '',
-      emailRules: [
-        v => !!v || 'E-mail é obrigatório',
-        v => /.+@.+/.test(v) || 'E-mail precisa ser válido',
+      listacheck: [
+        {texto:"Quer vender curso on-line pelo Instagram e não sabe por onde começar;"},
+        {texto:"Tem pouco conhecimento no Marketing Digital;"},
+        {texto:"Precisa de direcionamento com processos e estratégias;"},
+        {texto:"Tem um grande conhecimento em um determinado assunto, mas não sabe como aproveitar ele para criar um produto (curso digital);"},
       ],
-      nome: '',
-      nameRules: [
-        v => !!v || 'Nome é obrigatório',
-        v => v.length >= 4 || 'Nome deve ter pelo menos 4 caracteres',
-      ],
-      dificuldades: '',
-      desejo: '',
+      cards: [
+        {
+          titulo:"Análise da audiência",
+          texto:"A consultoria começa analisando a sua audiência e público comprador através de pesquisas."
+        },
+        {
+          titulo:"Construção do seu Produto",
+          texto:"Definiremos as melhores estratégias para estruturar o seu curso on-line"
+        },
+        {
+          titulo:"Comunicação para vender",
+          texto:"Após termos decidido a melhor estratégia alinhada ao seu negócio,  iniciaremos a estruturação da sua linha editorial focada na comunicação para vender o seu curso"
+        },
+      ]
     };
   },
 };

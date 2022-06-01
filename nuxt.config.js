@@ -116,7 +116,7 @@ export default {
         domains: ['issei.com.br']
       }
     },
-    debug: true, // enable to track in dev mode
+    debug: false, // enable to track in dev mode
     disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
     additionalAccounts: [{
       id: 'AW-1039538566', // required if you are adding additional accounts

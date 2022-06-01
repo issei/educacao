@@ -1,8 +1,5 @@
-export default ({ app }) => {
-    /*
-     ** Only run on client-side and only in production mode
-     */
-    if (process.env.NODE_ENV !== "production") return;
+export default ({ app },inject) => {
+    
     /*
      ** Initialize Facebook Pixel Script
      */
@@ -27,9 +24,13 @@ export default ({ app }) => {
       "script",
       "https://connect.facebook.net/en_US/fbevents.js"
     );
-    fbq("init", "232929938805467");
+    
+    // Inject $fbq(...) in Vue context 
+    inject('fbq', fbq);
 
     if (process.env.NODE_ENV == "development") return;
+
+    fbq("init", "232929938805467");
    
     app.router.afterEach((to, from) => {
       /*

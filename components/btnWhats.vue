@@ -23,6 +23,7 @@ export default {
             },
           ],
         };
+        this.$fbq('track', 'Contact', {currency: "BRL", value: 1.00});
         this.loading = false;
         this.$nuxt.$loading.finish();
         window.open('https://wa.me/5511985043045', '_blank','menubar=no,toolbar=no,location=no');
