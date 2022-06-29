@@ -13,15 +13,16 @@
           class="justify-space-around"
           style=""
         >
-          <v-col lg="6" md="12" sm="12" xs="12" class="mt-2">
-            <h3 class="text-h5  text-center text-lg-left font-weight-black">
-              QUER LANÇAR UM CURSO ON-LINE E NÃO SABE POR ONDE COMEÇAR?
+          <v-col lg="12" md="12" sm="12" xs="12" class="mt-2 text-center">
+            <h3 class="text-h2  text-center">
+              Você quer criar um curso digital e não sabe por onde começar?
             </h3>
-            <h4 class="text-h6 subtitle-1 text-center text-lg-left"><span class="font-weight-bold" style="color:#cda09b;">Baixe o ebook grátis e descubra 10 dicas para você lançar o seu produto</span></h4>
+            <h4 class="text-h4 subtitle-1 text-center mt-10 mb-10"><span  style="color:#cda09b;">Consultoria: Do zero ao produto pronto para lançar é o caminho para quem deseja construir e escalar o seu produto digital</span></h4>
             
           </v-col>
-          <v-col lg="6" md="12" sm="12" xs="12">
-          </v-col>
+        </v-row>
+        <v-row align="center" justify="center" class="justify-space-around mb-10">
+          <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"  style="color:#FFFFFF;">VAMOS CONVERSAR <v-icon right >mdi-whatsapp</v-icon></v-btn>
         </v-row>
          
       </v-container>
@@ -30,80 +31,83 @@
     <v-responsive
     :aspect-ratio="16 / 6"
     class="d-flex justify-center align-center pa-2"
-    style="background-color: #233a5a; color: #FFFFFF"
+    style="background-color: #233a5a; color: #FFFFFF; " z-index="1"
   >
-    <v-container>
-      <h1 class="d-flex justify-center align-center headline">A CONSULTORIA APc é para você que...</h1>
-      <v-row class="d-flex justify-center my-10">
+    <v-container style="border-style: solid; border-width: 1px 0 0; border-color: #e09d57;" >
+      <h1 class="d-flex justify-center align-center headline font-weight-black" style="font-weight:bold; margin: -25px 100px 0; background-color: #233a5a;">A CONSULTORIA  É PARA VOCÊ QUE...</h1>
+      <v-row class="d-flex justify-center my-10 ">
         <v-col class="d-flex align-stretch flex-column justify-center align-center pb-1">
           <v-col v-for="(item, i) in listacheck" :key="i" class="d-flex flex-row">
-            <v-icon large class="mr-5">mdi-check</v-icon>
+            <v-icon large class="mr-5"  style="color: #FFFFFF;">mdi-check</v-icon>
             <p v-html="item.texto"></p>
           </v-col>
         </v-col>
       </v-row>
-      <v-row justify="center" class="mt-1">
-        <BtnWhats :btnColor="btnColor" class="mr-4" texto_botao="texto"></BtnWhats>
+      <v-row justify="center" class="mb-10">
+        <v-btn id="chamarWhatsApp2" color="#25d366" @click="openWhats" rounded width="300" height="50"  style="color:#FFFFFF;">VAMOS CONVERSAR <v-icon right >mdi-whatsapp</v-icon></v-btn>
       </v-row>
     </v-container>
   </v-responsive>
 
-  <v-responsive :aspect-ratio="16 / 5" class="d-flex justify-center align-center pt-10 pb-10" style="background: #FFFFFF; color: #3e1607;">
-    <v-container>
-      <h1 class="d-flex justify-center align-center text-md-h4 text-sm-h4" style="font-weight:bold">COMO FUNCIONA A CONSULTORIA APc?</h1>
+  <v-responsive :aspect-ratio="16 / 5" class="d-flex justify-center align-center pt-10 pb-10" style="background: #233a5a; color: #FFFFFF;">
+    <v-container style="border-style: solid; border-width: 1px 0 0; border-color: #e09d57;">
+      <h1 class="d-flex justify-center align-center headline" style="font-weight:bold; margin: -25px 100px 0; background-color: #233a5a;">O QUE É A CONSULTORIA?</h1>
         <v-row class="d-flex justify-center align-center my-5">
             <h1 class="d-flex justify-center align-center headline"  style="color: black">
                 
             </h1>
         </v-row>
         <v-row class="d-flex justify-center align-center">
-            <v-card class="ma-2 rounded-xl " width="350" height="350" v-for="(item, i) in cards" :key="i" >
+            <v-card class="ma-2 rounded-xl " width="350" height="350" v-for="(item, i) in cards" :key="i" style="background: #233a5a;border: 1px solid #cda09b;" outlined shaped tile >
                 <v-card-text class="d-flex flex-column justify-center align-center justify-space-between justify-space-around ">
-                    <p v-html="item.titulo" class="mt-5 text-center text-h5" style="font-weight:bold;color:#000000"></p>
-                    <p v-html="item.texto" class="mt-5 text-center text-h6" style="color:#000000"></p>
+                    <p v-html="item.titulo" class="mt-5 text-center text-h5" style="font-weight:bold;color:#FFFFFF"></p>
+                    <p v-html="item.texto" class="mt-5 text-center text-h6" style="color:#FFFFFF"></p>
                 </v-card-text>
             </v-card>
         </v-row>
     </v-container>
   </v-responsive>
 
-    <v-responsive
-    :aspect-ratio="16 / 5"
-    style="background: #233a5a; color: #ffffff;"
-    class="d-flex justify-center justify-space-around align-center py-5 px-10">
-      <v-container>
-        <v-row class="d-flex justify-center justify-space-around align-center py-10">
-          <span class="headline font-weight-bold text-center" style="color:#cda09b">Você se sente perdido na hora de lançar o seu curso?</span>
-        </v-row>
-        <v-row class="d-flex justify-center justify-space-around align-center" style="color: #ffffff;">
-          <p class="text-h6 text-center">Eu sei que isso pode complicar quando você é sozinho e não tem com quem dividir as responsabilidades.</p>
-<p class="text-h6 text-center">Pensando em te ajudar e fazer a sua jornada mais leve, eu reuni 10 dicas para você tirar essa ideia do papel.</p>
-        </v-row>
-        <v-row class="d-flex justify-center justify-space-around align-center ma-10">
-          <v-btn @click="$vuetify.goTo('#formulario')" color="#f2f2f2" style="color:#233a5a;" rounded width="300" height="50">QUERO O MEU E-BOOK GRÁTIS!</v-btn>
-        </v-row>
-      </v-container>
-    </v-responsive>
+  <v-responsive
+    :aspect-ratio="16 / 6"
+    class="d-flex justify-center align-center pa-2"
+    style="background-color: #233a5a; color: #FFFFFF; " z-index="1"
+  >
+    <v-container style="border-style: solid; border-width: 1px 0 0; border-color: #e09d57;" >
+      <h1 class="d-flex justify-center align-center headline font-weight-black" style="margin: -25px 100px 0; background-color: #233a5a;">COMO FUNCIONA A CONSULTORIA ?  </h1>
+      <v-row class="d-flex justify-center my-10 ">
+        <v-col class="d-flex align-stretch flex-column justify-center align-center pb-1 border">
+          <v-col v-for="(item, i) in como" :key="i" class="d-flex flex-row mt-5" style="border: 1px solid #cda09b;">  
+            <v-icon large class="mr-5" style="color: #FFFFFF;">mdi-check</v-icon>
+            <p v-html="item.texto"></p>
+          </v-col>
+        </v-col>
+      </v-row>
+      <v-row justify="center" class="mt-1">
+        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"  style="color:#FFFFFF;">VAMOS CONVERSAR <v-icon right >mdi-whatsapp</v-icon></v-btn>
+      </v-row>
+    </v-container>
+  </v-responsive>
+
     <!-- BIO -->
-    
-    <!--style="background: #ede0e1; color: #5d1916;"-->
+        <!--style="background: #ede0e1; color: #5d1916;"-->
     <v-responsive
     :aspect-ratio="16 / 5"
-    style="background: #FFFFFF; color: #233a5a;"
+    style="background: #233a5a; color: #FFFFFF;"
     class="d-flex justify-center align-center py-5 px-5">
     <v-container>
             <v-row class="d-flex flex-row flex-wrap justify-center align-center" >
               <!--v-avatar  width="400" height="400"-->
-                <v-img contain src="https://issei.com.br/talita2.png" eager width="400" height="400"></v-img>
+                <v-img contain src="https://issei.com.br/talita.png" eager width="400" height="400"></v-img>
               <!--/v-avatar-->
                 <v-responsive width="50%" min-width="350" class="d-flex justify-space-around align-center mx-5 pt-5 text-justify" >
                 <p>Olá, muito prazer sou Talita Issei.</p>
                 <p>Trabalho no segmento de Consultoria há mais de 10 anos, antes de entrar para o mundo digital, era responsável pelo gerenciamento de projetos e de times.</p>
-                <p>Iniciei no Marketing digital em 2021. Estudei MUITO, mas não fiquei só na teoria, tudo que eu estudava, eu aplicava! Peguei os meus primeiros projetos e percebi que o grande problema das pessoas que queriam lançar um curso digital, era não saber por onde começar, por isso, reuni 10 passos para você iniciar hoje o seu projeto.</p>
+                <p>Iniciei no Marketing digital em 2021. Estudei MUITO, mas não fiquei só na teoria, tudo que eu estudava, eu aplicava! Peguei os meus primeiros projetos e percebi que o grande problema das pessoas que queriam lançar um curso digital, era um passo antes, a falta de estratégia e direcionamento na preparação para o lançamento. Com isso, criei a Consultoria. Quero te ajudar a analisar a sua audiência, estruturar o seu produto e criar estratégias de comunicação para você vender o seu curso on-line.</p>
                 </v-responsive>
             </v-row>
             <v-row class="d-flex justify-center justify-space-around align-center ma-10">
-          <v-btn @click="$vuetify.goTo('#formulario')" color="#f2f2f2" style="color:#000000;" rounded width="300" height="50">QUERO O MEU E-BOOK GRÁTIS!</v-btn>
+          <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50" style="color:#FFFFFF;">VAMOS CONVERSAR <v-icon right >mdi-whatsapp</v-icon></v-btn>
         </v-row>
     </v-container>
   </v-responsive> 
@@ -185,12 +189,28 @@ export default {
               }).catch(console.error);
             });
         },
+        async openWhats() {
+          this.$nuxt.$loading.start();
+            this.loading = true;
+            this.$gtag('event', 'ContatoWhats');
+            this.$fbq('track', 'Contact', {currency: "BRL", value: 1.00});
+            this.loading = false;
+            this.$nuxt.$loading.finish();
+            window.open('https://wa.me/5511985043045', '_blank','menubar=no,toolbar=no,location=no');
+        }
     },
   data() {
     return {
       valid: false,
+      loading: false,
       listacheck: [
         {texto:"Quer vender curso on-line pelo Instagram e não sabe por onde começar;"},
+        {texto:"Tem pouco conhecimento no Marketing Digital;"},
+        {texto:"Precisa de direcionamento com processos e estratégias;"},
+        {texto:"Tem um grande conhecimento em um determinado assunto, mas não sabe como aproveitar ele para criar um produto (curso digital);"},
+      ],
+      como: [
+        {texto:"É composta por 4 encontros durante 4 semanas consecutivas;"},
         {texto:"Tem pouco conhecimento no Marketing Digital;"},
         {texto:"Precisa de direcionamento com processos e estratégias;"},
         {texto:"Tem um grande conhecimento em um determinado assunto, mas não sabe como aproveitar ele para criar um produto (curso digital);"},
@@ -208,7 +228,51 @@ export default {
           titulo:"Comunicação para vender",
           texto:"Após termos decidido a melhor estratégia alinhada ao seu negócio,  iniciaremos a estruturação da sua linha editorial focada na comunicação para vender o seu curso"
         },
-      ]
+      ],
+      modulos: {
+              itens: [
+                {
+                    titulo: "Módulo 1",
+                    imagem: "/check.png",
+                    subtitulo: "Análise",
+                    texto: "Vou Analisar a situação atual e o seus principais objetivos",
+                    color: '#98a685',
+                    icon: 'mdi-check',
+                  },
+                  {
+                    titulo: "Módulo 2",
+                    imagem: "/check.png",
+                    subtitulo: "Dignóstico",
+                    texto: "Será realizado um diagnóstico e definição de metas claras e alcançáveis",
+                    color: '#98a685',
+                    icon: 'mdi-check',
+                  },
+                  {
+                    titulo: "Módulo 3",
+                    imagem: "/check.png",
+                    subtitulo: "Estratégia",
+                    texto: "Te ajudarei com as melhores estratégias para a sua Audiência do Instagram",
+                    color: '#98a685',
+                    icon: 'mdi-check',
+                  },
+                  {
+                    titulo: "Módulo 4",
+                    imagem: "/check.png",
+                    subtitulo: "Produto",
+                    texto: "Vou direcionar e ajudar a estruturar o seu produto (curso on-line)",
+                    color: '#98a685',
+                    icon: 'mdi-check',
+                  },
+                  {
+                    titulo: "Módulo 5",
+                    imagem: "/check.png",
+                    subtitulo: "Linha Editorial",
+                    texto: "Você nunca mais ficará perdida na hora de postar conteúdos, criaremos uma linha editorial com estratégias de comunicação para vender o seu curso",
+                    color: '#98a685',
+                    icon: 'mdi-check',
+                  },
+              ]
+            },
     };
   },
 };
