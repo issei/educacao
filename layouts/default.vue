@@ -9,7 +9,7 @@
       app
     >
       <span>&copy; {{ new Date().getFullYear() }}</span>
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>.
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" width="88" height="31" /></a>.
     </v-footer>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5F5585F"
@@ -22,6 +22,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </template>
 
 <style>
+html,body{
+  font-family: 'poppins', sans-serif;
+}
 .headline-titulo{
   color: black;
   font-size: 42px;

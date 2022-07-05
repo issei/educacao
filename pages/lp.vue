@@ -14,10 +14,10 @@
           style=""
         >
           <v-col lg="12" md="12" sm="12" xs="12" class="mt-2 text-center">
-            <h3 class="text-h3  text-center">
+            <h3 class="text-h3  text-center" style="font-family: 'Poppins', sans-serif !important;">
               Você quer criar um curso digital e não sabe por onde começar?
             </h3>
-            <h4 class="text-h4 subtitle-1 text-center mt-10 mb-10"><span  style="color:#cda09b;">Consultoria: Do zero ao produto pronto para lançar é o caminho para quem deseja construir e escalar o seu produto digital</span></h4>
+            <h5 class="text-h5 subtitle-1 text-center mt-10 mb-10"><span  style="color:#cda09b;font-family: 'Poppins', sans-serif !important;">Consultoria: Do zero ao produto pronto para lançar é o caminho para quem deseja construir e escalar o seu produto digital</span></h5>
             
           </v-col>
         </v-row>
@@ -60,8 +60,8 @@
         <v-row class="d-flex justify-center align-center">
             <v-card class="ma-2 rounded-xl " width="350" height="350" v-for="(item, i) in cards" :key="i" style="background: #233a5a;border: 1px solid #cda09b;" outlined shaped tile >
                 <v-card-text class="d-flex flex-column justify-center align-center justify-space-between justify-space-around ">
-                    <p v-html="item.titulo" class="mt-5 text-center text-h5" style="font-weight:bold;color:#FFFFFF"></p>
-                    <p v-html="item.texto" class="mt-5 text-center text-h6" style="color:#FFFFFF"></p>
+                    <p v-html="item.titulo" class="mt-5 text-center" style="font-weight:bold;color:#FFFFFF"></p>
+                    <p v-html="item.texto" class="mt-5 text-center" style="color:#FFFFFF"></p>
                 </v-card-text>
             </v-card>
         </v-row>
