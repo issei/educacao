@@ -3,7 +3,7 @@
     <!--HEAD-->
     <v-responsive
       :aspect-ratio="16 / 6"
-      class="d-flex justify-center align-center pb-3 px-2"
+      class="d-flex justify-center align-center"
       style="background-color: #233a5a; color: #FFFFFF"
     >
       <v-container>
@@ -13,15 +13,14 @@
           class="justify-space-around"
           style=""
         >
-          <v-col lg="12" md="12" sm="12" xs="12" class="mt-2 text-center">
-            <h3 class="text-h3  text-center" style="font-family: 'Poppins', sans-serif !important;">
-              Você quer criar um curso digital e não sabe por onde começar?
-            </h3>
-            <h5 class="text-h5 subtitle-1 text-center mt-10 mb-10"><span  style="color:#cda09b;font-family: 'Poppins', sans-serif !important;">Consultoria: Do zero ao produto pronto para lançar é o caminho para quem deseja construir e escalar o seu produto digital</span></h5>
-            
-          </v-col>
+            <span class="mt-5 text-center" style="color:#FFFFFF;font-size: 32px !important;">
+            Você quer criar um curso digital e não sabe por onde começar?
+            </span>
+            <span class="mt-10 mb-10 text-center"  style="color:#cda09b;font-size: 21px !important;">
+            Consultoria: Do zero ao produto pronto para lançar é o caminho para quem deseja construir e escalar o seu produto digital
+            </span>
         </v-row>
-        <v-row align="center" justify="center" class="justify-space-around mb-10">
+        <v-row justify="center" class="justify-space-around my-10">
           <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"  style="color:#FFFFFF;">VAMOS CONVERSAR <v-icon right >mdi-whatsapp</v-icon></v-btn>
         </v-row>
          
@@ -31,10 +30,10 @@
     <v-responsive
     :aspect-ratio="16 / 6"
     class="d-flex justify-center align-center pa-2"
-    style="background-color: #233a5a; color: #FFFFFF; " z-index="1"
+    style="background-color: #233a5a; color: #FFFFFF;"
   >
     <v-container >
-      <h1 class="d-flex justify-center align-center headline font-weight-black" style="font-weight:bold;">A CONSULTORIA  É PARA VOCÊ QUE...</h1>
+      <span class="mt-5 text-center" style="color:#FFFFFF;font-size: 26px !important;">A CONSULTORIA  É PARA VOCÊ QUE...</span>
       <v-row class="d-flex justify-center my-10 ">
         <v-col class="d-flex align-stretch flex-column justify-center align-center pb-1">
           <v-col v-for="(item, i) in listacheck" :key="i" class="d-flex flex-row">
@@ -51,7 +50,7 @@
 
   <v-responsive :aspect-ratio="16 / 5" class="d-flex justify-center align-center pt-10 pb-10" style="background: #233a5a; color: #FFFFFF;">
     <v-container>
-      <h1 class="d-flex justify-center align-center headline" style="font-weight:bold;">O QUE É A CONSULTORIA?</h1>
+      <span class="mt-5 text-center" style="color:#FFFFFF;font-size: 26px !important;">O QUE É A CONSULTORIA?</span>
         <v-row class="d-flex justify-center align-center my-5">
             <h1 class="d-flex justify-center align-center headline"  style="color: black">
                 
@@ -60,8 +59,8 @@
         <v-row class="d-flex justify-center align-center">
             <v-card class="ma-2 rounded-xl " width="350" height="350" v-for="(item, i) in cards" :key="i" style="background: #233a5a;border: 1px solid #cda09b;" outlined shaped tile >
                 <v-card-text class="d-flex flex-column justify-center align-center justify-space-between justify-space-around ">
-                    <p v-html="item.titulo" class="mt-5 text-center" style="font-weight:bold;color:#FFFFFF"></p>
-                    <p v-html="item.texto" class="mt-5 text-center" style="color:#FFFFFF"></p>
+                    <p v-html="item.titulo" class="mt-5 text-center" style="font-weight:bold;color:#FFFFFF;font-size: 21px !important;"></p>
+                    <p v-html="item.texto" class="mt-5 text-center" style="color:#FFFFFF;font-size: 18px !important;"></p>
                 </v-card-text>
             </v-card>
         </v-row>
@@ -71,15 +70,14 @@
   <v-responsive
     :aspect-ratio="16 / 6"
     class="d-flex justify-center align-center pa-2"
-    style="background-color: #233a5a; color: #FFFFFF; " z-index="1"
-  >
-    <v-container >
-      <h1 class="d-flex justify-center align-center headline font-weight-black">COMO FUNCIONA A CONSULTORIA ?  </h1>
+    style="background-color: #233a5a; color: #FFFFFF; ">
+    <v-container>
+      <span class="mt-5 text-center" style="color:#FFFFFF;font-size: 26px !important;">COMO FUNCIONA A CONSULTORIA ?  </span>
       <v-row class="d-flex justify-center my-10 ">
         <v-col class="d-flex align-stretch flex-column justify-center align-center pb-1 border">
           <v-col v-for="(item, i) in como" :key="i" class="d-flex flex-row mt-5" style="border: 1px solid #cda09b;">  
             <v-icon large class="mr-5" style="color: #FFFFFF;">mdi-check</v-icon>
-            <p v-html="item.texto"></p>
+            <p v-html="item.texto" style="color:#FFFFFF;font-size: 18px !important;"></p>
           </v-col>
         </v-col>
       </v-row>

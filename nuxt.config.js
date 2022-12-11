@@ -122,8 +122,9 @@ export default {
     },
     debug: false, // enable to track in dev mode
     disableAutoPageTrack: false, // disable if you don't want to track each page route with router.afterEach(...).
-    additionalAccounts: [{
-      id: 'AW-1039538566', // required if you are adding additional accounts
+    additionalAccounts: [
+    {
+      id: 'AW-10950250177', // required if you are adding additional accounts
       config: {
         send_page_view: true // optional configurations
       }

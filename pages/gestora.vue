@@ -3,70 +3,86 @@
   <v-main style="padding: 0px 0px 0px 0px;background-color: #020202;">
  
     <!--HEAD-->
-    <v-responsive :aspect-ratio="16 / 8" class="d-flex justify-center align-center px-5"
+    <v-responsive :aspect-ratio="16 / 6" class="d-flex justify-center align-center px-5"
       style="background-color: #020202; color: #FFFFFF">
       <v-container>
         <v-row class="mt-2">
           <span style="color:#ffbd59;font-size: 19px !important;"></span>
         </v-row>
         <v-row class="mt-2">
-          <span class="mt-5 isseiHeadline">VOCÊ TEM DIFICULDADES PARA ORGANIZAR E SE SENTE SOBRECARREGADO POR TER QUE COBRAR AS TAREFAS DO SEU TIME NOS LANÇAMENTOS?</span>
+          <span class="mt-5 isseiHeadline">VOCÊ TEM
+            DIFICULDADES PARA ORGANIZAR E SE SENTE SOBRECARREGADO POR TER QUE COBRAR AS TAREFAS DO SEU TIME NOS
+            LANÇAMENTOS?
+          </span>
           <span class="d-flex mt-5 justify-space-around align-center"
-            style="color:#ffbd59;font-size: 19px !important;">Muitos lançamentos não dão certos por falta de planejamento e acompanhamento. <br />Como Gestora de Projetos Estrategista vou organizar o lançamento e garantir que as entregas sejam finalizadas dentro do prazo.</span>
+            style="color:#ffbd59;font-size: 19px !important;">Muitos lançamentos não dão certos por falta de
+            planejamento e acompanhamento. <br />Como Gestora de Projetos Estrategista vou organizar o lançamento e
+            garantir que as entregas sejam finalizadas dentro do prazo.</span>
         </v-row>
-      </v-container>     
-      <v-row justify="center" class="justify-space-around my-16">
+      </v-container>
+    </v-responsive>
+
+    <v-responsive :aspect-ratio="16 / 3" class="d-flex justify-center "
+      style="background-color: #020202; color: #FFFFFF">
+     
+      <v-row justify="center" class="justify-space-around ma-10">
+        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
+          style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
+        </v-btn>
+      </v-row>
+     
+    </v-responsive>
+    <!--O que-->
+    <v-responsive :aspect-ratio="16 / 5" class="d-flex justify-center align-center px-5"
+      style="background-color: #020202; color: #FFFFFF">
+      <v-container>
+
+        <v-row>
+          <v-lazy>
+              <v-col class="d-flex justify-space-around align-center px-5">
+                <video width="100%" height="300" autoplay="autoplay" loop muted>
+                  <source src="https://issei.com.br/agil.mp4" type="video/mp4" />
+                </video>
+              </v-col>
+          </v-lazy>
+          <v-col>
+            <v-row class="align-center">
+              <span style="color:#ffbd59;font-size: 19px !important;">GESTOR DE PROJETOS ESTRATEGISTA</span>
+            </v-row>
+            <v-row class="pt-5">
+              <span class="" style="color:#FFFFFF;font-size: 19px !important;" >O meu papel
+                como Gestora de Projetos Estrategista é organizar, garantir que as entregas de cada fase do lançamento
+                sejam conduzidas e finalizadas dentro do cronograma previsto.</span>
+            </v-row>
+            <v-row><p class="d-flex mt-5 justify-space-around align-center">Com o
+                lançamento organizado a produtividade do seu time irá aumentar e você terá mais tempo para focar nas
+                estratégias.</p></v-row>
+          </v-col>
+ 
+
+        </v-row>
+      </v-container>
+    </v-responsive>
+    <v-responsive :aspect-ratio="16 / 2" class="d-flex justify-center "
+      style="background-color: #020202; color: #FFFFFF">
+      <v-row justify="center" class="justify-space-around ma-10">
         <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
           style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
         </v-btn>
       </v-row>
     </v-responsive>
-    <!--O que-->
-    <v-responsive class="d-flex justify-center align-center px-5"
+    <!--Como-->
+    <v-responsive :aspect-ratio="16 / 7" class="d-flex justify-center align-center pa-5"
       style="background-color: #020202; color: #FFFFFF">
-      <v-container>
-        <v-row class="px-0">
-          
-          <v-col class="d-flex justify-space-around align-center pr-5" sm="12" lg="6" xs="12" cols="12">
-            <v-lazy>
-            <video width="100%" autoplay="autoplay" loop muted>
-              <source src="https://issei.com.br/agil.mp4" type="video/mp4" />
-            </video>
-            </v-lazy>
-          </v-col>
-          
-          <v-col class="pa-0">
-            <v-row class="fill-height justify-space-between">
-              <v-row class="">
-                <span style="color:#ffbd59;font-size: 19px !important;">GESTOR DE PROJETOS ESTRATEGISTA</span>
-              </v-row>
-              <v-row class="mt-5">
-                <span class="d-flex align-center" style="color:#FFFFFF;font-size: 19px !important;" >O meu papel
-                  como Gestora de Projetos Estrategista é organizar, garantir que as entregas de cada fase do lançamento
-                  sejam conduzidas e finalizadas dentro do cronograma previsto.</span>
-              </v-row>
-              <v-row><p class="mt-5 d-flex align-center" style="font-size: 19px !important;">Com o
-                  lançamento organizado a produtividade do seu time irá aumentar e você terá mais tempo para focar nas
-                  estratégias.</p></v-row>
-            </v-row>
-          </v-col>
-        </v-row>
-        <v-row justify="center" class="justify-space-around  my-12">
-        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
-          style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
-        </v-btn>
-      </v-row>
-      </v-container>
-      
       <v-container>
       <v-row class="d-flex justify-center align-center mb-10">
         <span style="color:#ffffff;font-size: 21px !important;">COMO FUNCIONA O MEU SERVIÇO:</span>
       </v-row>
-      <v-row justify="center" align-content="center" v-if="conteudos.items.length > 1" class="d-flex flex pa-0">
-        <v-col v-for="(item, i) in conteudos.items" :key="i" cols="12" lg="4" sm="5"  class="pa-0">
+      <v-row justify="center" align-content="center" v-if="conteudos.items.length > 1" class="d-flex flex">
+        <v-col v-for="(item, i) in conteudos.items" :key="i" cols="12" lg="4" sm="5">
           <!--v-img :src="item.imagem" width="67" height="58"></v-img-->
-          <v-row class="pa-0">
-            <v-col cols="1" class="px-0">
+          <v-row>
+            <v-col cols="1">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 22 23" fill="none" style="vertical-align: middle;">
             <path
               d="M20.9861 10.409V11.3284C20.9849 13.4833 20.2871 15.5801 18.9968 17.306C17.7065 19.032 15.8929 20.2946 13.8264 20.9056C11.7599 21.5166 9.5513 21.4432 7.52991 20.6964C5.50853 19.9496 3.7827 18.5694 2.60982 16.7617C1.43694 14.9539 0.879856 12.8154 1.02164 10.6651C1.16343 8.51489 1.9965 6.46807 3.3966 4.82995C4.7967 3.19184 6.68881 2.0502 8.79076 1.57529C10.8927 1.10038 13.0918 1.31766 15.0602 2.19471"
@@ -75,46 +91,50 @@
               stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
 </v-col>
-<v-col class="px-0">
+<v-col>
           <div width="100%" class="pl-3 justify-space-around">
             <span class="font-weight-black" style="color:#ffbd59;">{{ item.titulo }}</span>
-            <p v-html="item.descricao" style="padding-right: 15px;"></p>
+            <p v-html="item.descricao"></p>
           </div>
           </v-col>
           </v-row>
         </v-col>
       </v-row>
-      <v-row align="center" justify="center" class="justify-space-around  mb-16 mt-8">
+      <v-row align="center" justify="center" class="justify-space-around ma-10">
         <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
           style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
         </v-btn>
       </v-row>
       </v-container>
+    </v-responsive>
+    <!-- BIO -->
+    <v-responsive :aspect-ratio="16 / 6" style="background: #020202; color: #FFFFFF;"
+      class="d-flex justify-center align-center px-5">
       <v-container>
-        <v-row class="pa-0">
+        <v-row class="d-flex flex-row flex-wrap justify-center align-center">
           <!--v-avatar  width="400" height="400"-->
-          <v-col cols="12" xs="12" sm="12" lg="6">
-            <v-img contain src="https://issei.com.br/talita.jpg" lazy width="100%" max-height="450" ></v-img>
-          </v-col>
+          <v-img contain src="https://issei.com.br/talita.jpg" lazy width="400" height="516"></v-img>
           <!--/v-avatar-->
-          <v-col cols="12" xs="12" sm="12" lg="6"
-            class="d-flex justify-space-around align-center pt-5">
-            <v-row>
+          <v-responsive width="60%" min-width="350"
+            class="d-flex justify-space-around align-center mx-5 pt-5">
             <p>Olá, muito prazer sou Talita Issei.</p>
             <p>Possuo 13 anos de experiência em Consultorias, sendo quase 5 anos focada em Gestão de Projetos e de Equipes.</p>
             <p>Estou no Marketing Digital há um ano.<BR/>Participei do Bootcamp da Escola Estado da Arte, onde acompanhei 6 lançamentos de ponta a ponta de nichos diferentes. Esse ano realizei dois lançamentos no nicho de Nutrição.</p>
             <p>Principais cursos e mentorias relacionados ao MKT Digital:<ul><li>Estrategista Digital - Leandro
               Aguiari</li><li>Storytelling Marketing - Leandro Aguiari</li><li>Aluna do O Novo Mercado - Ícaro de
               Carvalho</li><li>Aluna do Conversão Extrema - Tiago Tessmann</li><li>Mentorada Altitude - Tiago Tessmann</li></ul></p>
-              </v-row>
-          </v-col>
+          </v-responsive>
         </v-row>
-        <v-row class="d-flex justify-center justify-space-around align-center  my-10">
+        <v-row class="d-flex justify-center justify-space-around align-center ma-10">
           <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
             style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
           </v-btn>
         </v-row>
       </v-container>
+    </v-responsive>
+
+    <!-- FAQS -->
+    <v-responsive :aspect-ratio="16 / 7" class="d-flex justify-center align-center mx-5" style="background: #020202;">
       <v-container>
         <v-row justify="center">
           <span style="color:#ffbd59;font-size: 21px !important;">DÚVIDAS FREQUENTES</span>
@@ -126,10 +146,10 @@
                 disable-icon-rotate>
                 <template v-slot:actions>
                   <v-icon class="icon">
-                    mdi-chevron-down
+                    mdi-plus-thick
                   </v-icon>
                 </template>
-                <p style="font-size: 14px !important;font-weight:bold; margin:0px 0px 0px 0px;">{{item.pergunta}}</p>
+                <p style="font-size: 14px !important;font-weight:bold;">{{item.pergunta}}</p>
               </v-expansion-panel-header>
               <v-expansion-panel-content>
                 <p class="ma-5" style="font-size: 14px !important;">{{item.resposta}}</p>
@@ -137,7 +157,7 @@
             </v-expansion-panel>
           </v-expansion-panels>
         </v-row>
-        <v-row align="center" justify="center" class="justify-space-around mt-16 mb-14">
+        <v-row align="center" justify="center" class="justify-space-around mt-10 mb-10">
           <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
             style="color:#FFFFFF;">VAMOS CONVERSAR <v-icon right>mdi-whatsapp</v-icon>
           </v-btn>
@@ -174,13 +194,10 @@
 * {
   font-family: 'Poppins', sans-serif !important;
  }
- .row{
- margin: 0px;
- }
-
  .isseiHeadline{
     color:#FFFFFF;
     font-weight:bold;
+    line-height: 1.2 !important;
   }
  @media only screen and (max-width: 600px) {
   .isseiHeadline{
@@ -190,7 +207,6 @@
 @media only screen and (min-width: 600px) {
   .isseiHeadline{
     font-size: 42px !important;
-    line-height: 1.2 !important;
   }
 }
 </style>
@@ -247,17 +263,8 @@ export default {
             });
         },
         async openWhats() {
-          var callback = function () {
-            if (typeof(url) != 'undefined') {
-              window.location = url;
-            }
-          };
           this.$nuxt.$loading.start();
             this.loading = true;
-            this.$gtag('event', 'conversion', {
-      'send_to': 'AW-10950250177/wMFTCLCq784DEMGdvuUo',
-      'event_callback': callback
-  });
             this.$gtag('event', 'ContatoWhats');
             this.$fbq('track', 'Contact', {currency: "BRL", value: 1.00});
             this.loading = false;

@@ -14,10 +14,6 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5F5585F"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<noscript>
-<img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=232929938805467&ev=PageView&noscript=1"/>
-</noscript>
   </v-app>
 </template>
 
@@ -26,7 +22,7 @@ html,body{
   font-family: 'poppins', sans-serif;
 }
 .headline-titulo{
-  color: black;
+  color: white;
   font-size: 42px;
   font-weight: 500;
   line-height: 65px;
@@ -38,12 +34,6 @@ html,body{
     font-size: 19px;
     font-weight: 400;
     letter-spacing: 2px;
-}
-p {
-    font-family: "Poppins", Sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 30px;
 }
 </style>
 

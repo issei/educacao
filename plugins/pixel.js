@@ -30,7 +30,7 @@ export default ({ app },inject) => {
 
     if (process.env.NODE_ENV == "development") return;
 
-    fbq("init", "232929938805467");
+    fbq("init", "746637190095687");
    
     app.router.afterEach((to, from) => {
       /*

@@ -201,6 +201,7 @@ export default {
               console.log(result);
               this.$axios.get('https://issei.com.br/h9doc7nbgi2ug6im4y3l4jj0ltxxmv.pdf', { responseType: 'blob' })
               .then(response => {
+                console.log(response);
                 const blob = new Blob([response.data], { type: 'application/pdf' });
                 const link = document.createElement('a');
                 link.href = URL.createObjectURL(blob);

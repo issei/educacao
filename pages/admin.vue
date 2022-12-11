@@ -21,8 +21,8 @@ export default {
       this.$axios.setHeader('x-api-key', '5rSmuctSmaaBsZPGyecL12jtZW7BYgpq2s4iQqwT');
       console.log('teste');
       const result = await this.$axios.$get("https://api.issei.com.br/lead/ebook");
-      console.log(result.body);
-      this.posts = result.body;
+      console.log(result);
+      this.posts = result;
     },
    },
   data() {
