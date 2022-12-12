@@ -6,6 +6,7 @@ const parallelize = require('concurrent-transform')
 // https://docs.aws.amazon.com/cli/latest/userguide/cli-environment.html
 
 const config = {
+  region: "us-east-1",
   // Required
   params: {
     Bucket: process.env.AWS_BUCKET_NAME
