@@ -4,7 +4,7 @@
  
     <!--HEAD-->
     <v-responsive :aspect-ratio="16 / 8" class="d-flex justify-center align-center px-5"
-      style="background-color: #020202; color: #FFFFFF; background-image: url('./fundo.jpg'); background-position: center; background-repeat: no-repeat;  background-size: cover;">
+      style="background-color: #020202; color: #FFFFFF; background-image: url('./fund.jpg'); background-position: center; background-repeat: no-repeat;  background-size: cover;">
       <v-container>
         <v-row class="mt-2">
           <span style="color:#ffbd59;font-size: 19px !important;"></span>
@@ -102,10 +102,16 @@
             <v-row>
             <p>Olá, muito prazer sou Talita Issei.</p>
             <p>Possuo 13 anos de experiência em Consultorias, sendo quase 5 anos focada em Gestão de Projetos e de Equipes.</p>
-            <p>Estou no Marketing Digital há um ano.<BR/>Participei do Bootcamp da Escola Estado da Arte, onde acompanhei 6 lançamentos de ponta a ponta de nichos diferentes. Esse ano realizei dois lançamentos no nicho de Nutrição.</p>
-            <p>Principais cursos e mentorias relacionados ao MKT Digital:<ul><li>Estrategista Digital - Leandro
-              Aguiari</li><li>Storytelling Marketing - Leandro Aguiari</li><li>Aluna do O Novo Mercado - Ícaro de
-              Carvalho</li><li>Aluna do Conversão Extrema - Tiago Tessmann</li><li>Mentorada Altitude - Tiago Tessmann</li></ul></p>
+            <!--p>Estou no Marketing Digital há um ano.<BR/>Participei do Bootcamp da Escola Estado da Arte, onde acompanhei 6 lançamentos de ponta a ponta de nichos diferentes. Esse ano realizei dois lançamentos no nicho de Nutrição.</p-->
+            <p>No Marketing Digital, gerenciei 2 projetos 6em7 e 2 projetos 5em1.</p>
+            <p>Principais cursos e mentorias relacionados ao MKT Digital:
+            <ul>
+              <li>Estrategista Digital - Leandro Aguiari</li>
+              <li>Storytelling Marketing - Leandro Aguiari</li>
+              <li>Aluna do O Novo Mercado - Ícaro de Carvalho</li>
+              <li>Aluna do Conversão Extrema - Tiago Tessmann</li>
+              <li>Mentorada Altitude - Tiago Tessmann</li>
+            </ul></p>
               </v-row>
           </v-col>
         </v-row>

@@ -8,7 +8,7 @@
       class="d-flex justify-center"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
+      <span>&copy; {{ new Date().getFullYear() }} | CNPJ: 41.397.513/0001-65</span>&nbsp;
       <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>.
     </v-footer>
 <!-- Google Tag Manager (noscript) -->

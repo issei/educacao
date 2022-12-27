@@ -62,6 +62,22 @@
           entre em contato com a gente através do nosso email de atendimento.
         </p>
       </v-card-text>
+      <v-btn @click="goToPrev()">Voltar</v-btn>
     </v-container>
   </v-responsive>
 </template>
+<script>
+export default {
+  methods: {
+    goToPrev() {
+
+      // ...
+      // Do other logic like logging, etc.
+      // ...
+
+      // Tell router to go back one
+      this.$router.go(-1);
+    },
+  }
+}
+</script>
