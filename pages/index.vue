@@ -4,7 +4,7 @@
  
     <!--HEAD-->
     <v-responsive :aspect-ratio="16 / 8" class="d-flex justify-center align-center px-5"
-      style="background-color: #020202; color: #FFFFFF">
+      style="background-color: #020202; color: #FFFFFF; background-image: url('./fundo.jpg'); background-position: center; background-repeat: no-repeat;  background-size: cover;">
       <v-container>
         <v-row class="mt-2">
           <span style="color:#ffbd59;font-size: 19px !important;"></span>
@@ -16,14 +16,14 @@
         </v-row>
       </v-container>     
       <v-row justify="center" class="justify-space-around my-16">
-        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
-          style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
+        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="350" height="50"
+          style="color:#FFFFFF;font-size: 19px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
         </v-btn>
       </v-row>
     </v-responsive>
     <!--O que-->
     <v-responsive class="d-flex justify-center align-center px-5"
-      style="background-color: #020202; color: #FFFFFF">
+      style="background-color: #020202; color: #FFFFFF; background-image: url('./fundo3.jpg'); background-position: center; background-repeat: no-repeat;  background-size: cover;">
       <v-container>
         <v-row class="px-0">
           
@@ -38,7 +38,7 @@
           <v-col class="pa-0">
             <v-row class="fill-height justify-space-between">
               <v-row class="">
-                <span style="color:#ffbd59;font-size: 19px !important;">GESTOR DE PROJETOS ESTRATEGISTA</span>
+                <span style="color:#ffbd59;font-size: 21px !important;">GESTOR DE PROJETOS ESTRATEGISTA</span>
               </v-row>
               <v-row class="mt-5">
                 <span class="d-flex align-center" style="color:#FFFFFF;font-size: 19px !important;" >O meu papel
@@ -52,13 +52,13 @@
           </v-col>
         </v-row>
         <v-row justify="center" class="justify-space-around  my-12">
-        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
-          style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
+        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="370" height="50"
+          style="color:#FFFFFF;font-size: 21px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
         </v-btn>
       </v-row>
       </v-container>
       
-      <v-container>
+      <v-container >
       <v-row class="d-flex justify-center align-center mb-10">
         <span style="color:#ffffff;font-size: 21px !important;">COMO FUNCIONA O MEU SERVIÇO:</span>
       </v-row>
@@ -77,7 +77,7 @@
 </v-col>
 <v-col class="px-0">
           <div width="100%" class="pl-3 justify-space-around">
-            <span class="font-weight-black" style="color:#ffbd59;">{{ item.titulo }}</span>
+            <span class="font-weight-black" style="color:#ffbd59;font-size: 19px !important;">{{ item.titulo }}</span>
             <p v-html="item.descricao" style="padding-right: 15px;"></p>
           </div>
           </v-col>
@@ -85,8 +85,8 @@
         </v-col>
       </v-row>
       <v-row align="center" justify="center" class="justify-space-around  mb-16 mt-8">
-        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
-          style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
+        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="370" height="50"
+          style="color:#FFFFFF;font-size: 21px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
         </v-btn>
       </v-row>
       </v-container>
@@ -110,8 +110,8 @@
           </v-col>
         </v-row>
         <v-row class="d-flex justify-center justify-space-around align-center  my-10">
-          <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
-            style="color:#FFFFFF;font-size: 14px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
+          <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="350" height="50"
+            style="color:#FFFFFF;font-size: 19px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
           </v-btn>
         </v-row>
       </v-container>
@@ -138,8 +138,8 @@
           </v-expansion-panels>
         </v-row>
         <v-row align="center" justify="center" class="justify-space-around mt-16 mb-14">
-          <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="300" height="50"
-            style="color:#FFFFFF;">VAMOS CONVERSAR <v-icon right>mdi-whatsapp</v-icon>
+          <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="350" height="50"
+            style="color:#FFFFFF;font-size: 19px !important;">VAMOS CONVERSAR <v-icon right>mdi-whatsapp</v-icon>
           </v-btn>
         </v-row>
       </v-container>
@@ -171,9 +171,9 @@
   </v-main>
 </template>
 <style scoped>
-* {
+span{
   font-family: 'Poppins', sans-serif !important;
- }
+}
  .row{
  margin: 0px;
  }
@@ -181,10 +181,12 @@
  .isseiHeadline{
     color:#FFFFFF;
     font-weight:bold;
+    font-family: 'Poppins', sans-serif !important;
   }
  @media only screen and (max-width: 600px) {
   .isseiHeadline{
     font-size: 26px !important;
+    font-family: 'Poppins', sans-serif !important;
   }
 }
 @media only screen and (min-width: 600px) {
