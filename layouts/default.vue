@@ -4,11 +4,15 @@
         <Nuxt />
     </v-main>
     <v-footer
-      :absolute="!fixed"
+      :absolute="fixed"
       class="d-flex justify-center"
+      style="background-color: #020202; color: #FFFFFF;"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }} | Talita Yokoyama Issei LTDA | CNPJ: 41.397.513/0001-65 | <NuxtLink to="/politica-de-privacidade">Política de Privacidade</NuxtLink></span>
+      <span class="text-center" style="font-size: 12px !important;">Copyright &copy; {{ new Date().getFullYear() }}</span>
+      <span class="text-center" style="font-size: 12px !important;">&nbsp;Talita Yokoyama Issei LTDA.</span>
+      <span class="text-center" style="font-size: 12px !important;">&nbsp;CNPJ:41.397.513/0001-65</span>
+      <span class="text-center" style="font-size: 12px !important;">&nbsp;&nbsp;<NuxtLink to="/politica-de-privacidade">Política de Privacidade</NuxtLink>&nbsp;&nbsp;</span>
     </v-footer>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5F5585F"

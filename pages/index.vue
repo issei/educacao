@@ -10,12 +10,12 @@
           <span style="color:#ffbd59;font-size: 19px !important;"></span>
         </v-row>
         <v-row class="mt-2">
-          <span class="mt-5 isseiHeadline">VOCÊ TEM DIFICULDADES PARA ORGANIZAR E SE SENTE SOBRECARREGADO POR TER QUE COBRAR AS TAREFAS DO SEU TIME NOS LANÇAMENTOS?</span>
-          <span class="d-flex mt-5 justify-space-around align-center"
+          <span class="mt-5 isseiHeadline animate__animated animate__fadeInDown">VOCÊ TEM DIFICULDADES PARA ORGANIZAR E SE SENTE SOBRECARREGADO POR TER QUE COBRAR AS TAREFAS DO SEU TIME NOS LANÇAMENTOS?</span>
+          <span class="d-flex mt-5 justify-space-around align-center animate__animated animate__fadeInUp"
             style="color:#ffbd59;font-size: 19px !important;">Muitos lançamentos não dão certos por falta de planejamento e acompanhamento. <br />Como Gestora de Projetos Estrategista vou organizar o lançamento e garantir que as entregas sejam finalizadas dentro do prazo.</span>
         </v-row>
       </v-container>     
-      <v-row justify="center" class="justify-space-around my-16">
+      <v-row justify="center" class="justify-space-around my-16 animate__animated animate__fadeIn">
         <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="350" height="50"
           style="color:#FFFFFF;font-size: 19px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
         </v-btn>
@@ -25,33 +25,35 @@
     <v-responsive class="d-flex justify-center align-center px-5"
       style="background-color: #020202; color: #FFFFFF; background-image: url('./fundo3.jpg'); background-position: center; background-repeat: no-repeat;  background-size: cover;">
       <v-container>
-        <v-row class="px-0">
+        <v-row class="px-0 mt-15 mb-15">
           
           <v-col class="d-flex justify-space-around align-center pr-5" sm="12" lg="6" xs="12" cols="12">
+            <v-avatar  width="290" height="290">
             <v-lazy>
-            <video width="100%" autoplay="autoplay" loop muted>
+            <video autoplay="autoplay" loop muted>
               <source src="https://issei.com.br/agil.mp4" type="video/mp4" />
             </video>
             </v-lazy>
+          </v-avatar>
           </v-col>
           
-          <v-col class="pa-0">
+          <v-col class="pa-10">
             <v-row class="fill-height justify-space-between">
               <v-row class="">
-                <span style="color:#ffbd59;font-size: 21px !important;">GESTOR DE PROJETOS ESTRATEGISTA</span>
+                <span class="font-weight-black" style="color:#ffbd59;font-size: 26px !important;">GESTOR DE PROJETOS ESTRATEGISTA</span>
               </v-row>
               <v-row class="mt-5">
-                <span class="d-flex align-center" style="color:#FFFFFF;font-size: 19px !important;" >O meu papel
+                <span class="d-flex align-center animate__animated animate__slideInRight" style="color:#FFFFFF;font-size: 16px !important;" >O meu papel
                   como Gestora de Projetos Estrategista é organizar, garantir que as entregas de cada fase do lançamento
                   sejam conduzidas e finalizadas dentro do cronograma previsto.</span>
               </v-row>
-              <v-row><p class="mt-5 d-flex align-center" style="font-size: 19px !important;">Com o
+              <v-row><p class="mt-4 d-flex align-center animate__animated animate__slideInRight" style="font-size: 16px !important;">Com o
                   lançamento organizado a produtividade do seu time irá aumentar e você terá mais tempo para focar nas
                   estratégias.</p></v-row>
             </v-row>
           </v-col>
         </v-row>
-        <v-row justify="center" class="justify-space-around  my-12">
+        <v-row justify="center" class="justify-space-around">
         <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="370" height="50"
           style="color:#FFFFFF;font-size: 21px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
         </v-btn>
@@ -59,14 +61,14 @@
       </v-container>
       
       <v-container >
-      <v-row class="d-flex justify-center align-center mb-10">
-        <span style="color:#ffffff;font-size: 21px !important;">COMO FUNCIONA O MEU SERVIÇO:</span>
+      <v-row class="d-flex justify-center align-center mb-10 mt-10">
+        <span class="font-weight-black" style="color:#ffbd59;font-size: 26px !important;">COMO FUNCIONA O MEU SERVIÇO:</span>
       </v-row>
       <v-row justify="center" align-content="center" v-if="conteudos.items.length > 1" class="d-flex flex pa-0">
         <v-col v-for="(item, i) in conteudos.items" :key="i" cols="12" lg="4" sm="5"  class="pa-0">
           <!--v-img :src="item.imagem" width="67" height="58"></v-img-->
           <v-row class="pa-0">
-            <v-col cols="1" class="px-0">
+            <v-col cols="1" class="ml-0 mr-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 22 23" fill="none" style="vertical-align: middle;">
             <path
               d="M20.9861 10.409V11.3284C20.9849 13.4833 20.2871 15.5801 18.9968 17.306C17.7065 19.032 15.8929 20.2946 13.8264 20.9056C11.7599 21.5166 9.5513 21.4432 7.52991 20.6964C5.50853 19.9496 3.7827 18.5694 2.60982 16.7617C1.43694 14.9539 0.879856 12.8154 1.02164 10.6651C1.16343 8.51489 1.9965 6.46807 3.3966 4.82995C4.7967 3.19184 6.68881 2.0502 8.79076 1.57529C10.8927 1.10038 13.0918 1.31766 15.0602 2.19471"
@@ -75,7 +77,7 @@
               stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
 </v-col>
-<v-col class="px-0">
+<v-col class="">
           <div width="100%" class="pl-3 justify-space-around">
             <span class="font-weight-black" style="color:#ffbd59;font-size: 19px !important;">{{ item.titulo }}</span>
             <p v-html="item.descricao" style="padding-right: 15px;"></p>
@@ -92,11 +94,15 @@
       </v-container>
       <v-container>
         <v-row class="pa-0">
-          <!--v-avatar  width="400" height="400"-->
+          
           <v-col cols="12" xs="12" sm="12" lg="6">
-            <v-img contain src="https://issei.com.br/talita.jpg" lazy width="100%" max-height="450" ></v-img>
-          </v-col>
+            <v-lazy>
+            <!--v-avatar  width="400" height="400"-->
+            <v-img contain position="center 25%" src="https://issei.com.br/talita.jpg" lazy width="100%" max-height="450" ></v-img>
           <!--/v-avatar-->
+        </v-lazy>
+          </v-col>
+          
           <v-col cols="12" xs="12" sm="12" lg="6"
             class="d-flex justify-space-around align-center pt-5">
             <v-row>
@@ -123,7 +129,7 @@
       </v-container>
       <v-container>
         <v-row justify="center">
-          <span style="color:#ffbd59;font-size: 21px !important;">DÚVIDAS FREQUENTES</span>
+          <span class="font-weight-black" style="color:#ffbd59;font-size: 25px !important;">DÚVIDAS FREQUENTES</span>
         </v-row>
         <v-row justify="center" class="my-10">
           <v-expansion-panels focusable>
@@ -135,10 +141,10 @@
                     mdi-chevron-down
                   </v-icon>
                 </template>
-                <p style="font-size: 14px !important;font-weight:bold; margin:0px 0px 0px 0px;">{{item.pergunta}}</p>
+                <p style="font-size: 16px !important;font-weight:bold; margin:0px 0px 0px 0px;">{{item.pergunta}}</p>
               </v-expansion-panel-header>
               <v-expansion-panel-content>
-                <p class="ma-5" style="font-size: 14px !important;">{{item.resposta}}</p>
+                <p class="ma-5" style="font-size: 15px !important;">{{item.resposta}}</p>
               </v-expansion-panel-content>
             </v-expansion-panel>
           </v-expansion-panels>
@@ -199,6 +205,7 @@ span{
   .isseiHeadline{
     font-size: 42px !important;
     line-height: 1.2 !important;
+    font-family: 'Poppins', sans-serif !important;
   }
 }
 </style>
