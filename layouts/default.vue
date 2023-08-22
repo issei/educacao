@@ -4,7 +4,7 @@
         <Nuxt />
     </v-main>
     <v-footer
-      :absolute="fixed"
+      :absolute="!fixed"
       class="d-flex justify-center"
       style="background-color: #020202; color: #FFFFFF;"
       app

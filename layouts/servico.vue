@@ -42,6 +42,11 @@ p {
 
 <script>
 export default {
+  head:{
+    meta: [
+        { hid: 'og:image', property: 'og:image', content: 'https://issei.com.br/PROCESSO-SELETIVO.png' },
+      ]
+  },
   data () {
     return {
       clipped: false,
