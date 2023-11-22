@@ -10,65 +10,46 @@
           <span style="color:#ffbd59;font-size: 19px !important;"></span>
         </v-row>
         <v-row class="mt-2">
-          <span class="mt-5 isseiHeadline animate__animated animate__fadeInDown">VOCÊ TEM <degrade-color>DIFICULDADES PARA ORGANIZAR</degrade-color> <BR/> E SE SENTE SOBRECARREGADO <BR/>POR TER QUE COBRAR AS TAREFAS<BR/> DO SEU TIME NOS LANÇAMENTOS?</span>
+          <span class="mt-5 isseiHeadline animate__animated animate__fadeInDown">ORGANIZAÇÃO QUE GERA RESULTADOS: CONSULTORIA DE ESTRUTURAÇÃO DE PROCESSOS PARA EMPRESAS/PROJETOS DIGITAIS</span>
         </v-row>
         <v-row class="mt-2">
           <span class="d-flex mt-5 justify-space-around align-center animate__animated animate__fadeInUp"
-            style="color:#ffbd59;font-size: 19px !important;">Muitos lançamentos não dão certos por falta de planejamento e acompanhamento. <br />Como Gestora de Projetos Estrategista vou organizar <BR/>o lançamento e garantir que as entregas sejam finalizadas dentro do prazo.</span>
+            style="color:#ffbd59;font-size: 19px !important;">Maximize o crescimento da sua Empresa com uma Especialista em organização de processos</span>
         </v-row>
       </v-container>     
       <v-row justify="center" class="justify-space-around my-16 animate__animated animate__fadeIn">
-        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="350" height="50"
-          style="color:#FFFFFF;font-size: 19px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
-        </v-btn>
+        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="350" height="50" style="color:#FFFFFF;font-size: 19px !important;"><v-icon left>mdi-whatsapp</v-icon>ME CHAME NO WHATSAPP</v-btn>
       </v-row>
     </v-responsive>
     <!--O que-->
     <v-responsive class="d-flex justify-center align-center px-5"
       style="background-color: #020202; color: #FFFFFF; background-image: url('./fundo3.jpg'); background-position: center; background-repeat: no-repeat;  background-size: cover;">
-      <v-container>
-        <v-row class="px-0 mt-15 mb-15">
-          
-          <v-col class="d-flex justify-space-around align-center pr-5" sm="12" lg="6" xs="12" cols="12">
-            <v-avatar  width="290" height="290">
-            <v-lazy>
-            <video autoplay="autoplay" loop muted>
-              <source src="https://issei.com.br/agil.mp4" type="video/mp4" />
-            </video>
-            </v-lazy>
-          </v-avatar>
-          </v-col>
-          
-          <v-col class="pa-10">
-            <v-row class="fill-height justify-space-between">
-              <v-row class="">
-                <span class="font-weight-black" style="color:#ffbd59;font-size: 26px !important;">GESTOR DE PROJETOS ESTRATEGISTA</span>
-              </v-row>
-              <v-row class="mt-5">
-                <span class="d-flex align-center animate__animated animate__slideInRight" style="color:#FFFFFF;font-size: 16px !important;" >O meu papel
-                  como Gestora de Projetos Estrategista é organizar, garantir que as entregas de cada fase do lançamento
-                  sejam conduzidas e finalizadas dentro do cronograma previsto.</span>
-              </v-row>
-              <v-row><p class="mt-4 d-flex align-center animate__animated animate__slideInRight" style="font-size: 16px !important;">Com o
-                  lançamento organizado a produtividade do seu time irá aumentar e você terá mais tempo para focar nas
-                  estratégias.</p></v-row>
-            </v-row>
-          </v-col>
-        </v-row>
-        <v-row justify="center" class="justify-space-around">
-        <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="370" height="50"
-          style="color:#FFFFFF;font-size: 21px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
-        </v-btn>
+      <v-container >
+      <v-row class="d-flex justify-center align-center mb-10 mt-10">
+        <span class="font-weight-black" style="color:#059931;font-size: 26px !important;">Atendimento Personalizado para o Seu Sucesso</span>
+      </v-row>
+      <v-row justify="center" align-content="center" v-if="conteudos.items.length > 1" class="d-flex flex pa-0">
+        <v-col v-for="(item, i) in conteudos.items" :key="i" cols="12" lg="6" sm="5"  class="pa-2">
+          <!--v-img :src="item.imagem" width="67" height="58"></v-img-->
+          <v-card class="mx-auto" max-width="500" min-height="400">
+            <v-img src="./fotos/Card1-413x122.png" height="122px" cover></v-img>
+            <v-card-title>
+              <p v-html="item.titulo"></p>
+            </v-card-title>
+            <v-card-text >
+              <p v-html="item.descricao" style="padding-right: 15px;"></p>
+            </v-card-text>
+          </v-card>
+        </v-col>
       </v-row>
       </v-container>
       
       <v-container >
       <v-row class="d-flex justify-center align-center mb-10 mt-10">
-        <span class="font-weight-black" style="color:#ffbd59;font-size: 26px !important;">COMO FUNCIONA O MEU SERVIÇO:</span>
+        <span class="font-weight-black" style="color:#ffbd59;font-size: 26px !important;">O QUE A MINHA CONSULTORIA EM ESTRUTURAÇÃO DE PROCESSOS ENTREGA</span>
       </v-row>
       <v-row justify="center" align-content="center" v-if="conteudos.items.length > 1" class="d-flex flex pa-0">
-        <v-col v-for="(item, i) in conteudos.items" :key="i" cols="12" lg="4" sm="5"  class="pa-0">
-          <!--v-img :src="item.imagem" width="67" height="58"></v-img-->
+        <v-col cols="12" lg="4" sm="5"  class="pa-0">
           <v-row class="pa-0">
             <v-col cols="1" class="ml-0 mr-1">
           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 22 23" fill="none" style="vertical-align: middle;">
@@ -81,8 +62,12 @@
 </v-col>
 <v-col class="">
           <div width="100%" class="pl-3 justify-space-around">
-            <span class="font-weight-black" style="color:#ffbd59;font-size: 19px !important;">{{ item.titulo }}</span>
-            <p v-html="item.descricao" style="padding-right: 15px;"></p>
+            <span class="font-weight-black" style="color:#ffbd59;font-size: 19px !important;">Entregáveis:</span>
+            <p style="padding-right: 15px;">
+              Análise aprofundada dos processos existentes.
+              Desenvolvimento de um plano de melhoria de processos.
+              Estruturação de processos
+              Organização e Padronização de Processos.</p>
           </div>
           </v-col>
           </v-row>
@@ -94,6 +79,37 @@
         </v-btn>
       </v-row>
       </v-container>
+
+
+      <v-container >
+        <v-row class="d-flex justify-center align-center mb-10 mt-10">
+          <span class="font-weight-black" style="color:#ffbd59;font-size: 26px !important;">O QUE A MINHA CONSULTORIA ENTREGA</span>
+        </v-row>
+        <v-row justify="center" align-content="center" class="d-flex flex pa-0">
+          <v-col cols="12" lg="4" sm="5"  class="pa-0">
+            <v-card elevated>
+              <v-card-title>
+                <v-row class="d-flex justify-center align-center">
+                  <v-avatar  width="150" height="150" >
+                    <v-img position="center 30%"  src="./fotos/JESSICAFOTO.jpeg" lazy  ></v-img>
+                  </v-avatar>
+                </v-row>
+                <v-row class="d-flex justify-center align-center">
+                  <p>Jessica Fortaleza</p>
+                </v-row>
+              </v-card-title>
+              <v-card-text>"A consultoria de proceso foi um divisor de águas na minha agência. Antes estava tudo na minha cabeça e eu perdia muito tempo explicando várias e repetidas vezes pro time as tarefas.
+Hoje cada um já sabe as suas responsabilidades e já tem autonomia para resolver questões com muito mais rapidez e assertividade.
+A agência hoje tem capacidade para receber mais clientes sem sobrecarregar o time pelo simples fato de ter os processos todos bem desenhados.
+A Talita é de uma competência ímpar e expertise dela e do time dela foram fundamentais para eu poder agregar ainda mais valor aos meus contratos e mostrar profissionalismo desde o primeiro contato com o cliente.
+Serei sempre grata!"</v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
+
+
+
       <v-container>
         <v-row class="pa-0">
           
@@ -109,17 +125,7 @@
             class="d-flex justify-space-around align-center pt-5">
             <v-row>
             <p>Olá, muito prazer sou Talita Issei.</p>
-            <p>Possuo 13 anos de experiência em Consultorias, sendo quase 5 anos focada em Gestão de Projetos e de Equipes.</p>
-            <!--p>Estou no Marketing Digital há um ano.<BR/>Participei do Bootcamp da Escola Estado da Arte, onde acompanhei 6 lançamentos de ponta a ponta de nichos diferentes. Esse ano realizei dois lançamentos no nicho de Nutrição.</p-->
-            <p>No Marketing Digital, gerenciei 2 projetos 6em7 e 2 projetos 5em1.</p>
-            <p>Principais cursos e mentorias relacionados ao MKT Digital:
-            <ul>
-              <li>Estrategista Digital - Leandro Aguiari</li>
-              <li>Storytelling Marketing - Leandro Aguiari</li>
-              <li>Aluna do O Novo Mercado - Ícaro de Carvalho</li>
-              <li>Aluna do Conversão Extrema - Tiago Tessmann</li>
-              <li>Mentorada Altitude - Tiago Tessmann</li>
-            </ul></p>
+            <p>Com mais de 15 anos de trajetória em Grandes Empresas Multinacionais e Consultorias, atuei na liderança de projetos e equipes, demonstrando uma sólida habilidade em gestão e coordenação. Nos últimos 2 anos e meio, direcionei minha carreira para o universo do Marketing Digital, onde participei ativamente de mais de 20 lançamentos digitais significativos, atuando como Gerente de Projetos. Sou apaixonada em auxiliar equipes a alcançarem seus objetivos, assegurando que os projetos sejam concluídos em conformidade com os prazos e orçamentos estabelecidos. Atualmente, faço parte de uma das maiores mentorias do marketing digital, o “Bastidor Pro” - Priscila Zillo.</p>
               </v-row>
           </v-col>
         </v-row>
@@ -226,7 +232,8 @@ export default {
   computed: {
     snackbar (){
       this.$store.commit('optIn/get'); 
-      return this.$store.state.optIn.optIn;
+      //return this.$store.state.optIn.optIn;
+      return false;
     },
   },
   methods: {
@@ -270,24 +277,24 @@ export default {
               }).catch(console.error);
             });
         },
-        async openWhats() {
-          var callback = function () {
-            if (typeof(url) != 'undefined') {
-              window.location = url;
-            }
-          };
-          this.$nuxt.$loading.start();
-            this.loading = true;
-            this.$gtag('event', 'conversion', {
-      'send_to': 'AW-10950250177/wMFTCLCq784DEMGdvuUo',
-      'event_callback': callback
-  });
-            this.$gtag('event', 'ContatoWhats');
-            this.$fbq('track', 'Contact', {currency: "BRL", value: 1.00});
-            this.loading = false;
-            this.$nuxt.$loading.finish();
-            window.open('https://wa.me/5511985043045', '_blank','menubar=no,toolbar=no,location=no');
-        }
+      async openWhats() {
+        var callback = function () {
+          if (typeof (url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        this.$nuxt.$loading.start();
+        this.loading = true;
+        this.$gtag('event', 'conversion', {
+          'send_to': 'AW-10950250177/wMFTCLCq784DEMGdvuUo',
+          'event_callback': callback
+        });
+        this.$gtag('event', 'ContatoWhats');
+        this.$fbq('track', 'Contact', { currency: "BRL", value: 1.00 });
+        this.loading = false;
+        this.$nuxt.$loading.finish();
+        window.open('https://wa.me/5511985043045', '_blank', 'menubar=no,toolbar=no,location=no');
+      }
     },
   data() {
     return {
@@ -384,30 +391,22 @@ export default {
             conteudos: {
               items: [
                 {
-                titulo: "BRIEFING",
-                descricao: "A partir desse contato inicial, é recebido o briefing do projeto e serão discutidas as primeiras iniciativas relacionadas à condução do lançamento"
+                titulo: "CONSULTORIA PERSONALIZADA",
+                descricao: "Nossa consultoria vai além do convencional. Entendemos profundamente suas necessidades específicas. Adaptamos os processos para garantir o melhor desempenho para sua empresa."
               },
               {
-                titulo: "DEFINIÇÃO DE OBJETIVOS",
-                descricao: "Organizarei o cronograma do lançamento com metas claras e atingíveis para cada etapa do projeto."
+                titulo: "PREVISIBILIDADE E EFICÁCIA NOS PROCESSOS",
+                descricao: "Implementamos processos claros e eficientes, focados em antecipar e superar obstáculos. Esta abordagem assegura uma execução de projeto previsível, minimizando riscos e aumentando a confiabilidade do seu negócio."
               },
               {
-                titulo: "DELEGAR ATIVIDADES",
+                titulo: "ESTRATÉGIAS ALINHADAS COM SUAS PRIORIDADES",
                 descricao: "Após o levantamento do time necessário para atender a demanda do lançamento, organizarei as atividades de cada responsável na ferramenta Trello."
               },
               {
-                titulo: "PRIORIZAÇÃO",
-                descricao: "Com base nas estratégias, estabelecerei o nível de prioridade adequado para cada etapa do processo."
-              },
-              {
-                titulo: "REUNIÕES DE STATUS",
-                descricao: "Realizarei reuniões periódicas com a equipe. Nelas, avaliarei se as etapas estão prosseguindo conforme o cronograma e conter possíveis problemas antes que impactem a entrega."
-              },
-              {
-                titulo: "ACOMPANHAMENTO DA ENTREGA",
-                descricao: "Uma etapa bastante decisiva para o processo é o monitoramento da evolução das entregas, que significa garantir que tudo está sendo realizado dentro do cronograma e agir em função de possíveis atrasos."
-              },
-            ],
+                titulo: "REDUÇÃO DE DESPERDÍCIOS PARA MAIOR RENTABILIDADE",
+                descricao: "Nossa metodologia é fundamentada na utilização otimizada de tempo e recursos. Focamos em evitar desperdícios e o uso desnecessário de recursos, contribuindo para uma gestão mais sustentável e econômica do seu negócio. "
+              }
+            ]
             },
     };
   },

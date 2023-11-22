@@ -217,7 +217,7 @@ export default {
   computed: {
     snackbar (){
       this.$store.commit('optIn/get'); 
-      return this.$store.state.optIn.optIn;
+      return false;//this.$store.state.optIn.optIn;
     },
   },
   methods: {

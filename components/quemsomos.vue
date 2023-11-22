@@ -6,12 +6,15 @@
     <v-container>
             <h1 class="d-flex justify-center align-center headline">{{titulo}}</h1>
             <v-row class="d-flex flex-row flex-wrap justify-center  mt-10">
-                <v-img contain :src="foto" width="300" height="300"></v-img>
-                <v-card flat width="50%" min-width="350" class="d-flex justify-space-around align-center mx-2 pa-6">
-                <p v-html="texto"></p></v-card>
+              <v-col cols="6" xs="12" sm="12" lg="6">
+                <v-img contain :src="foto" max-height="700"></v-img>
+              </v-col>
+              <v-col cols="6" class="d-flex justify-center align-center pt-5" xs="12" sm="12"  lg="6">
+                <p v-html="texto"></p>
+              </v-col>
             </v-row>
              <v-row justify="center">
-              <BtnWhats btnColor="#5fd9c2" class="mr-4" texto_botao="Vamos conversar"></BtnWhats>
+              <BtnWhats btnColor="#5fd9c2" class="mr-4" texto_botao="FALE COMIGO"></BtnWhats>
             </v-row>
             </v-container>
   </v-responsive>

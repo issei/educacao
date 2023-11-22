@@ -6,10 +6,13 @@
     <v-footer
       :absolute="!fixed"
       class="d-flex justify-center"
+      style="background-color: #020202; color: #FFFFFF;"
       app
     >
-      <span>&copy; {{ new Date().getFullYear() }} | CNPJ: 41.397.513/0001-65</span>&nbsp;
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>.
+      <span class="text-center" style="font-size: 12px !important;">Copyright &copy; {{ new Date().getFullYear() }}</span>
+      <span class="text-center" style="font-size: 12px !important;">&nbsp;Talita Yokoyama Issei LTDA.</span>
+      <span class="text-center" style="font-size: 12px !important;">&nbsp;CNPJ:41.397.513/0001-65</span>
+      <span class="text-center" style="font-size: 12px !important;">&nbsp;&nbsp;<NuxtLink to="/politica-de-privacidade">Política de Privacidade</NuxtLink>&nbsp;&nbsp;</span>
     </v-footer>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5F5585F"
@@ -18,6 +21,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </template>
 
 <style>
+html,body{
+  font-family: 'Poppins', sans-serif;
+}
 .headline-titulo{
   color: black;
   font-size: 42px;
@@ -34,7 +40,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 }
 p {
     font-family: "Poppins", Sans-serif;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 300;
     line-height: 30px;
 }

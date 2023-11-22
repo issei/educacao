@@ -1,8 +1,8 @@
 <template>
 
   <v-main style="padding: 0px 0px 0px 0px;background-color: #020202;">
-    <v-app-bar 
-    fade-img-on-scroll>
+    
+    <v-app-bar>
     <v-breadcrumbs :items="menu">
       <template v-slot:item="{ item }">
         <v-breadcrumbs-item
@@ -11,9 +11,10 @@
         >
           {{ item.text.toUpperCase() }}
         </v-breadcrumbs-item>
-    </template>
-  </v-breadcrumbs>
+        </template>
+      </v-breadcrumbs>
     </v-app-bar>
+
     <!--HEAD-->
     <v-responsive :aspect-ratio="16 / 4" class="d-flex justify-center align-center px-5"
       style="background-color: #020202; color: #FFFFFF; background-image: url('./fotos/2500x861.png'); background-position: top center; background-repeat: no-repeat;  background-size: cover;">

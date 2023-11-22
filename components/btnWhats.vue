@@ -1,5 +1,5 @@
 <template>
-    <v-btn id="chamarWhatsApp" :color="btnColor" @click="openWhats">{{texto_botao}}</v-btn>
+    <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="350" height="50" style="color:#FFFFFF;font-size: 19px !important;"><v-icon left>mdi-whatsapp</v-icon>{{texto_botao}}</v-btn>
 </template>
 <script>
 export default {
@@ -9,24 +9,22 @@ export default {
   }),
   methods: {
     async openWhats() {
-      this.$nuxt.$loading.start();
-      this.loading = true;
-        const data = {
-          data: [
-            {
-              event_name: "Lead",
-              event_time: Math.floor(new Date() / 1000),
-              custom_data: {
-                currency: "BRL",
-                value: 1,
-              },
-            },
-          ],
+        var callback = function () {
+          if (typeof (url) != 'undefined') {
+            window.location = url;
+          }
         };
-        this.$fbq('track', 'Contact', {currency: "BRL", value: 1.00});
+        this.$nuxt.$loading.start();
+        this.loading = true;
+        this.$gtag('event', 'conversion', {
+          'send_to': 'AW-10950250177/wMFTCLCq784DEMGdvuUo',
+          'event_callback': callback
+        });
+        this.$gtag('event', 'ContatoWhats');
+        this.$fbq('track', 'Contact', { currency: "BRL", value: 1.00 });
         this.loading = false;
         this.$nuxt.$loading.finish();
-        window.open('https://wa.me/5511985043045', '_blank','menubar=no,toolbar=no,location=no');
+        window.open('https://wa.me/5511985043045', '_blank', 'menubar=no,toolbar=no,location=no');
     }
   }
 }
