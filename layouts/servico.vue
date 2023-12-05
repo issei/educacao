@@ -1,12 +1,12 @@
 <template>
-  <v-app>
+  <v-app style="background-color:  #F4F3F2; color: #54595F;">
     <v-main>
         <Nuxt />
     </v-main>
     <v-footer
       :absolute="!fixed"
       class="d-flex justify-center"
-      style="background-color: #020202; color: #FFFFFF;"
+      style="background-color:  #F4F3F2; color: #54595F;"
       app
     >
       <span class="text-center" style="font-size: 12px !important;">Copyright &copy; {{ new Date().getFullYear() }}</span>
