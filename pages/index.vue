@@ -226,7 +226,7 @@ Serei sempre grata!"</v-card-text>
       </v-row>
     </v-container>
   </v-responsive>
-  <v-responsive :aspect-ratio="16/7" class="d-flex justify-center sessao2">
+  <v-responsive class="d-flex justify-center sessao2">
     <v-container>
       <v-row class="d-flex flex-row flex-wrap justify-center">
         
@@ -290,10 +290,10 @@ span{
     background-image: url('/fundo/8.png'); 
     background-position: center; 
     background-repeat: no-repeat;  
-    background-size: auto;
+    background-size: cover;
   }
   .fundoConsultoriaSM{
-    background-image: url('/fundo/3.png'); 
+    background-image: url('/fundo/8.png'); 
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
