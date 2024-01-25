@@ -1,11 +1,11 @@
 <template>
 <v-main >
-  <v-responsive :aspect-ratio="16/6"  class="d-flex justify-center align-center  fundoConsultoria">
+  <v-responsive :aspect-ratio="16/7" class="d-flex justify-center align-center  fundoConsultoria">
     <v-container no-gutters="true">
       <v-row class="d-lg-none" ></v-row>
-    <v-row class="justify-center align-center" no-gutters="true">
-      <v-col lg="1" xs="12"  sm="12"></v-col>
-      <v-col lg="5" xs="12" sm="12" class="justify-end">
+    <v-row class="justify-center align-center">
+      <v-col xxl="1" xl="1" lg="1" xs="12"  sm="12"></v-col>
+      <v-col xxl="5" xl="5" lg="5" xs="12" sm="12" class="justify-end">
         <v-row align="center" justify="center">
           <v-col class="text-left" cols="12">
             <span class="isseiHeadline">
@@ -19,13 +19,13 @@
         <v-row align="center" justify="center">
           <v-col class="text-center" cols="12">
             <v-row justify="center" class="mt-5">
-              <v-btn id="chamarWhatsApp" class="mr-4" color="#25d366" @click="openWhats" rounded width="350" height="50" style="color:#FFFFFF;font-size: 19px !important;"><v-icon left>mdi-whatsapp</v-icon>FALE COMIGO</v-btn>
+              <v-btn id="chamarWhatsApp" class="mr-4" color="#25d366" href="#gppro" rounded width="350" height="50" style="color:#FFFFFF;font-size: 19px !important;">APLICAÇÃO MENTORIA GP PRO</v-btn>
             </v-row>
           </v-col>
         </v-row>
       </v-col>
-      <v-col no-gutters="true" class="order-lg-last" >
-        <v-img contain src="/fotos/IMG_3698.png" class="fotoTalitaHead" ></v-img>
+      <v-col xxl="5" xl="5" lg="5" xs="12" sm="12" class="order-lg-last" >
+        <v-img contain src="/fotos/IMG_3698.png" class="fill-height fotoTalitaHead" height="100vh"></v-img>
       </v-col>
     </v-row>
     </v-container>
@@ -80,11 +80,11 @@
             <v-img eager src="https://issei.com.br/fotos/IMG_3398.jpg" width="500" height="500" contain></v-img>
           </v-col>
         </v-row>
-        <v-row class="d-flex justify-center">
+        <!--v-row class="d-flex justify-center">
           <v-btn id="chamarWhatsApp" color="#25d366" @click="openWhats" rounded width="370" height="50" 
             style="color:#FFFFFF;font-size: 21px !important;">ME CHAME NO WHATSAPP <v-icon right>mdi-whatsapp</v-icon>
           </v-btn>
-        </v-row>
+        </v-row-->
     </v-container>
   </v-responsive>
   <v-divider></v-divider> 
@@ -179,23 +179,144 @@ Serei sempre grata!"</v-card-text>
   <v-divider></v-divider>
   <v-responsive class="d-flex justify-center  sessao2">
     <v-container>
-      <v-row class="d-flex justify-center align-center mt-10">
-        <span class="font-weight-black text-center titulos">QUEM É TALITA ISSEI</span>
-      </v-row>
+      
       <v-row class="d-flex flex-row flex-wrap align-center">        
         <v-col xs="12" sm="12" lg="6" class="d-flex justify-center">
-          <v-img contain eager src="https://issei.com.br/fotos/IMG_3625.jpg" max-height="549" max-width="366" ></v-img>
+          <v-img contain eager src="https://issei.com.br/fotos/IMG_3625.jpg" height="100vh" class="fill-height " ></v-img>
         </v-col>        
-        <v-col class="d-flex align-stretch pt-5" xs="12" sm="12"  lg="4">
+        <v-col class="d-flex-fill align-stretch pt-5" xs="12" sm="12"  lg="4">
+          <v-row class="d-flex justify-center align-center" width="100%">
+            <span class="font-weight-black text-center titulos">QUEM É TALITA ISSEI</span><br/>
+          </v-row>
           <p v-html="who.texto" class="justify-start" ></p>
         </v-col>
         <v-col lg="2" xs="12" sm="12"  class="d-none d-sm-flex"></v-col>
       </v-row>
-        <v-row justify="center">
+        <!--v-row justify="center">
          <v-btn id="chamarWhatsApp" class="mr-4" color="#25d366" @click="openWhats" rounded width="350" height="50" style="color:#FFFFFF;font-size: 19px !important;"><v-icon left>mdi-whatsapp</v-icon>FALE COMIGO</v-btn>
-      </v-row>
+      </v-row-->
       </v-container>
   </v-responsive>   
+  <v-responsive :aspect-ratio="16 / 7" class="d-flex justify-center align-center fundoConsultoria ">
+    <v-container  v-if="cadastrado === true" no-gutters="true">
+      <v-row class="d-flex justify-center align-center">
+        <span class="font-weight-black text-center titulos">OBRIGADA PELA APLICAÇÃO MENTORIA GP PRO</span>
+      </v-row>
+      <v-row class="d-flex justify-center align-center">
+        <BtnWhats btnColor="#5fd9c2" class="mr-4" texto_botao="FALE COMIGO"></BtnWhats>
+      </v-row>
+    </v-container>
+    <v-container id="gppro" v-if="cadastrado === false" >
+      <v-row class="d-flex justify-center align-center mt-10">
+        <span class="font-weight-black text-center titulos">APLICAÇÃO MENTORIA GP PRO</span>
+      </v-row>
+      <v-form v-model="valid" ref="form" id="formulario" class="d-flex justify-center">
+              <v-hover v-slot="{ hover }">
+                <v-card width="50%" min-width="340px" color="#FFFFFF" :elevation="hover ? 16 : 2" class="pb-2">
+                      
+                    <v-card-text width="100%">
+                      <span style="color:#000000" class="font-weight-bold">* Qual seu nome completo?</span>
+                        <v-text-field 
+                                v-model="nome"
+                                :rules="nameRules"
+                                outlined
+                                color="#000000"
+                                filled
+                                required
+                                dense
+                                background-color="white"
+                        >
+                          <template v-slot:label></template>
+                        </v-text-field>
+                      <span style="color:#000000" class="font-weight-bold">* Qual seu melhor email?</span>
+                        <v-text-field 
+                                v-model="email"
+                                :rules="emailRules"
+                                outlined
+                                color="#000000"
+                                filled
+                                required
+                                dense
+                                background-color="white"
+                        >
+                          <template v-slot:label></template>
+                        </v-text-field>
+                        <span style="color:#000000" class="font-weight-bold">* Qual o seu WhatsApp? (informe com o DDD)?</span>
+                        <v-text-field 
+                                v-model="telefone"
+                                :rules="telefoneRules"
+                                outlined
+                                color="#000000"
+                                filled
+                                required
+                                dense
+                                background-color="white"
+                        >
+                          <template v-slot:label></template>
+                        </v-text-field>
+
+                        
+                        <v-radio-group v-model="ocupacao" >
+                          <v-radio value="Gerente de Projetos Digitais">
+                            <template v-slot:label>
+                              <span style="color:#000000" class="font-weight-bold">Gerente de Projetos Digitais</span>
+                            </template>
+                          </v-radio>
+                          <v-radio value="Trabalho no Digital, mas não sou gerente de projetos">
+                            <template v-slot:label>
+                              <span style="color:#000000" class="font-weight-bold">Trabalho no Digital, mas não sou gerente de projetos</span>
+                            </template>
+                          </v-radio>
+                          <v-radio value="Sou CLT">
+                            <template v-slot:label>
+                              <span style="color:#000000" class="font-weight-bold">Sou CLT</span>
+                            </template>
+                          </v-radio>
+                          <v-radio value="Outro">
+                            <template v-slot:label>
+                              <span style="color:#000000" class="font-weight-bold">Outro</span>
+                            </template>
+                          </v-radio>
+                          <template v-slot:label>
+                            <span style="color:#000000" class="font-weight-bold">* Qual a sua principal ocupação?</span>
+                          </template>
+                        </v-radio-group>
+                        
+                        <span style="color:#000000" class="font-weight-bold">* Descreva quais são os seus principais desafios no digital?</span>
+                        <v-text-field
+                            v-model="dificuldades"
+                            :rules="[v => !!v || 'Informe']"
+                            outlined
+                            required
+                            filled
+                            color="#000000"
+                            dense
+                            background-color="white"
+                        ><template v-slot:label>
+                          
+                        </template>
+                        </v-text-field>
+                        <span style="color:#000000" class="font-weight-bold">* Como eu posso te ajudar a vencer esses obstáculos?</span>
+                        <v-text-field
+                            v-model="desejo"
+                            :rules="[v => !!v || 'Informe']"
+                            outlined
+                            required
+                            filled
+                            color="#000000"
+                            dense
+                            background-color="white"
+                        ><template v-slot:label>
+                          
+                        </template>
+                        </v-text-field>
+                    </v-card-text>
+                    <v-card-actions class="justify-center"><v-btn @click="sendForm" color="#25d366" style="color:#FFFFFF;" rounded width="300" height="50">ENVIAR</v-btn></v-card-actions>
+                </v-card>
+                </v-hover>
+            </v-form>
+    </v-container>
+  </v-responsive>
 
 
 </v-main>
@@ -217,7 +338,7 @@ span{
     background-image: url('/fundo/8.png'); 
     background-position: center; 
     background-repeat: no-repeat;  
-    background-size: auto;
+    background-size: cover;
   }
   .fundoConsultoriaSM{
     background-image: url('/fundo/3.png'); 
@@ -253,8 +374,7 @@ span{
   }
   
 
- @media only screen and (max-width: 959px) {
-
+  @media only screen and (max-width: 959px) {
   .hero-section{
     color: #000; 
     background-color: #fff; 
@@ -285,7 +405,9 @@ span{
   pointer-events: none; /* Para evitar que a sobreposição interfira com interações do usuário */
   }
 }
-@media only screen and (min-width: 1265px) {
+
+
+@media only screen and (min-width: 1264px) {
   .hero-section{
     color: #000; 
     background-image: url('https://issei.com.br/fundo/2560-x-700-H03.png'); 
@@ -307,11 +429,29 @@ span{
 <script>
 
 export default {
+  layout: 'servico',
   mounted() {
   },
   data() {
     return {
-
+      email: '',
+      emailRules: [
+        v => !!v || 'E-mail é obrigatório',
+        v => /.+@.+/.test(v) || 'E-mail precisa ser válido',
+      ],
+      nome: '',
+      nameRules: [
+        v => !!v || 'Nome é obrigatório',
+        v => v.length >= 4 || 'Nome deve ter pelo menos 4 caracteres',
+      ],
+      telefone: '',
+      telefoneRules: [
+        v => !!v || 'Telefone é obrigatório',
+        v => /^\(?\d{2}\)?[-\s]?\d{5}[-\s]?\d{4}$/.test(v) || 'Telefone precisa ser válido',
+      ],
+      ocupacao: '',
+      dificuldades: '',
+      desejo: '',
       praquem: {
         titulo: "MENTORIA PARA GERENTE DE PROJETOS",
         items: [
@@ -387,7 +527,46 @@ export default {
         this.loading = false;
         this.$nuxt.$loading.finish();
         window.open('https://wa.me/5511985043045', '_blank', 'menubar=no,toolbar=no,location=no');
-    }
-  }
+    },
+    sendForm () {
+        this.$refs.form.validate();
+        if(this.valid){
+          this.submit();
+        }
+      },
+      async submit() {
+        this.$nuxt.$loading.start();
+        this.$gtag('event', 'Lead', { "email": this.email});
+        this.$fbq('track', 'Subscribe', {currency: "BRL", value: 1.00});
+        this.$axios.$post(
+            "https://api.issei.com.br/lead/gppro",
+            {
+              email: this.email,
+              nome: this.nome,
+              telefone: this.telefone,
+              ocupacao: this.ocupacao,
+              dificuldades: this.dificuldades,
+              desejo: this.desejo,
+              origin: "issei.com.br"
+            },
+            {}
+          )
+          .then((result) => {
+              console.log(result);
+              this.$store.commit('cadastro/accept');
+              this.loading = false;
+              this.$nuxt.$loading.finish();
+          });
+      },
+      
+   
+  },
+  computed: {
+    cadastrado (){
+      this.$store.commit('cadastro/get'); 
+      return this.$store.state.cadastro.cadastrado;
+    },
+  },
+  
 };
 </script>
